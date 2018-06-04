@@ -1,0 +1,1637 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/localhost;coms_bi",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "localhost",
+            "database": "coms_bi"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "Windows",
+          "kind": "SQL",
+          "path": "localhost;coms_bi",
+          "Username": "CLASSDB\\Administrator",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "c customer",
+        "columns": [
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id"
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name"
+          },
+          {
+            "name": "abn_acn",
+            "dataType": "string",
+            "sourceColumn": "abn_acn"
+          },
+          {
+            "name": "ownerid",
+            "dataType": "string",
+            "sourceColumn": "ownerid"
+          },
+          {
+            "name": "recordtype",
+            "dataType": "string",
+            "sourceColumn": "recordtype"
+          },
+          {
+            "name": "billingaddress",
+            "dataType": "string",
+            "sourceColumn": "billingaddress"
+          },
+          {
+            "name": "billingcontact",
+            "dataType": "string",
+            "sourceColumn": "billingcontact"
+          },
+          {
+            "name": "billingend",
+            "dataType": "dateTime",
+            "sourceColumn": "billingend"
+          },
+          {
+            "name": "billingname",
+            "dataType": "string",
+            "sourceColumn": "billingname"
+          },
+          {
+            "name": "billingstartdate",
+            "dataType": "dateTime",
+            "sourceColumn": "billingstartdate"
+          },
+          {
+            "name": "businesstype",
+            "dataType": "string",
+            "sourceColumn": "businesstype"
+          },
+          {
+            "name": "businesstype2",
+            "dataType": "string",
+            "sourceColumn": "businesstype2"
+          },
+          {
+            "name": "Cap_Stage_1_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Cap_Stage_1_End_Date__c"
+          },
+          {
+            "name": "CL_Billing_Cap__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Billing_Cap__c"
+          },
+          {
+            "name": "Cap_Stage_2_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Cap_Stage_2_End_Date__c"
+          },
+          {
+            "name": "Cap_Stage_2_Units__c",
+            "dataType": "double",
+            "sourceColumn": "Cap_Stage_2_Units__c"
+          },
+          {
+            "name": "CL_Class_Business_Code__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Class_Business_Code__c"
+          },
+          {
+            "name": "CL_Contract_Type__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Contract_Type__c"
+          },
+          {
+            "name": "CL_Contracted_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Contracted_Date__c"
+          },
+          {
+            "name": "CL_Countplus_Firm__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Countplus_Firm__c"
+          },
+          {
+            "name": "CL_Data_Use_Restrictions__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Data_Use_Restrictions__c"
+          },
+          {
+            "name": "CL_Date_Termination_Requested__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Date_Termination_Requested__c"
+          },
+          {
+            "name": "NumberOfEmployees",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfEmployees"
+          },
+          {
+            "name": "FundSuspensionLastFollowUp__c",
+            "dataType": "dateTime",
+            "sourceColumn": "FundSuspensionLastFollowUp__c"
+          },
+          {
+            "name": "CL_Lite_Funds__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Lite_Funds__c"
+          },
+          {
+            "name": "CL_Lite_p_a_Discount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Lite_p_a_Discount__c"
+          },
+          {
+            "name": "CL_Member_Of__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Member_Of__c"
+          },
+          {
+            "name": "CL_Class_Admin_Partners__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Class_Admin_Partners__c"
+          },
+          {
+            "name": "ParentId",
+            "dataType": "string",
+            "sourceColumn": "ParentId"
+          },
+          {
+            "name": "CL_Partner_Agreement__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Partner_Agreement__c"
+          },
+          {
+            "name": "CL_Portfolio_Contract__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Portfolio_Contract__c"
+          },
+          {
+            "name": "CL_Portfolio_Discounting__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Portfolio_Discounting__c"
+          },
+          {
+            "name": "CL_Portfolio_per_month_rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Portfolio_per_month_rate__c"
+          },
+          {
+            "name": "CL_Portfolio_Rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Portfolio_Rate__c"
+          },
+          {
+            "name": "CL_Practice_Management_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Practice_Management_Platform__c"
+          },
+          {
+            "name": "CL_Pre_Class_Portfolio_System__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Pre_Class_Portfolio_System__c"
+          },
+          {
+            "name": "CL_Pre_Class_SMSF_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Pre_Class_SMSF_Platform__c"
+          },
+          {
+            "name": "Pricing_model__c",
+            "dataType": "string",
+            "sourceColumn": "Pricing_model__c"
+          },
+          {
+            "name": "CL_Referred_to_Admin__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Referred_to_Admin__c"
+          },
+          {
+            "name": "CL_Sales_Territory__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Sales_Territory__c"
+          },
+          {
+            "name": "CL_SMSF_p_a_Rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_p_a_Rate__c"
+          },
+          {
+            "name": "CL_SMSF_per_month_rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_per_month_rate__c"
+          },
+          {
+            "name": "CL_SMSF_Required_Before_Lite__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_Required_Before_Lite__c"
+          },
+          {
+            "name": "CL_SMSF_Volume_Discount__c",
+            "dataType": "string",
+            "sourceColumn": "CL_SMSF_Volume_Discount__c"
+          },
+          {
+            "name": "SSA_Discount_Tier__c",
+            "dataType": "string",
+            "sourceColumn": "SSA_Discount_Tier__c"
+          },
+          {
+            "name": "CL_Stage_1_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_1_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_1_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_1_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_1_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_1_Start_Date__c"
+          },
+          {
+            "name": "CL_Stage_2_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_2_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_2_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_2_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_2_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_2_Start_Date__c"
+          },
+          {
+            "name": "CL_Stage_3_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_3_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_3_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_3_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_3_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_3_Start_Date__c"
+          },
+          {
+            "name": "CL_Is_Standard_Contract__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Is_Standard_Contract__c"
+          },
+          {
+            "name": "CL_Status__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Status__c"
+          },
+          {
+            "name": "CL_Tax_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Tax_Platform__c"
+          },
+          {
+            "name": "CL_TO_Billing_Email_List__c",
+            "dataType": "string",
+            "sourceColumn": "CL_TO_Billing_Email_List__c"
+          },
+          {
+            "name": "CL_Total_No_of_Portfolio__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Total_No_of_Portfolio__c"
+          },
+          {
+            "name": "CL_Total_No_of_SMSF__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Total_No_of_SMSF__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Auto__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Auto__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Manual_1__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Manual_1__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Manual_2__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Manual_2__c"
+          },
+          {
+            "name": "CL_Discount_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Discount_End_Date__c"
+          },
+          {
+            "name": "Transition_Offer_End_Date_Manual__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Transition_Offer_End_Date_Manual__c"
+          },
+          {
+            "name": "Transition_Offer_End_Date_Manual_2__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Transition_Offer_End_Date_Manual_2__c"
+          },
+          {
+            "name": "CL_Transition_Rate__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Transition_Rate__c"
+          },
+          {
+            "name": "CL_Type_of_Audit__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Type_of_Audit__c"
+          },
+          {
+            "name": "CL_Volume_Discounting__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Volume_Discounting__c"
+          },
+          {
+            "name": "Website",
+            "dataType": "string",
+            "sourceColumn": "Website"
+          },
+          {
+            "name": "customerage",
+            "dataType": "int64",
+            "sourceColumn": "customerage"
+          },
+          {
+            "name": "sk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_customer"
+          },
+          {
+            "name": "nk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_customer"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "recordtypedesc",
+            "dataType": "string",
+            "sourceColumn": "recordtypedesc"
+          },
+          {
+            "name": "Implementation_IC__c",
+            "dataType": "string",
+            "sourceColumn": "Implementation_IC__c"
+          },
+          {
+            "name": "AdministratorSize",
+            "dataType": "string",
+            "sourceColumn": "AdministratorSize"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_customer = Source{[Schema=\"c\",Item=\"customer\"]}[Data]",
+                "in",
+                "    c_customer"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Customer - Count",
+            "expression": "calculate(DISTINCTCOUNT([Id]),'c customer'[Id]<>BLANK())",
+            "formatString": "0"
+          }
+        ]
+      },
+      {
+        "name": "Opportunity",
+        "columns": [
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id"
+          },
+          {
+            "name": "AccountId",
+            "dataType": "string",
+            "sourceColumn": "AccountId"
+          },
+          {
+            "name": "CloseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CloseDate"
+          },
+          {
+            "name": "Commission_business_code__c",
+            "dataType": "string",
+            "sourceColumn": "Commission_business_code__c"
+          },
+          {
+            "name": "CL_Commission_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Commission_End_Date__c"
+          },
+          {
+            "name": "CL_Commission_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Commission_Start_Date__c"
+          },
+          {
+            "name": "CL_Day_1_Welcome_Pack__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Day_1_Welcome_Pack__c"
+          },
+          {
+            "name": "CL_Day_30_Progress_Call__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Day_30_Progress_Call__c"
+          },
+          {
+            "name": "CL_Day_45_Billing_Progress_Call__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Day_45_Billing_Progress_Call__c"
+          },
+          {
+            "name": "CL_Day_7_Training_Imp_Plan__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Day_7_Training_Imp_Plan__c"
+          },
+          {
+            "name": "CL_Day_90_Support_Handover__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Day_90_Support_Handover__c"
+          },
+          {
+            "name": "CL_Expected_Portfolios__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Expected_Portfolios__c"
+          },
+          {
+            "name": "CL_Expected_SMSF__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Expected_SMSF__c"
+          },
+          {
+            "name": "Extra_Business_Opp__c",
+            "dataType": "string",
+            "sourceColumn": "Extra_Business_Opp__c"
+          },
+          {
+            "name": "CL_Extra_Business_Code__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Extra_Business_Code__c"
+          },
+          {
+            "name": "CL_Getting_Started_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Getting_Started_Date__c"
+          },
+          {
+            "name": "CL_Handover_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Handover_Date__c"
+          },
+          {
+            "name": "IC_Assigned__c",
+            "dataType": "string",
+            "sourceColumn": "IC_Assigned__c"
+          },
+          {
+            "name": "ImpHandOverDate__c",
+            "dataType": "dateTime",
+            "sourceColumn": "ImpHandOverDate__c"
+          },
+          {
+            "name": "CL_Implementation_Expected_Portfolios__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Implementation_Expected_Portfolios__c"
+          },
+          {
+            "name": "CL_Implementation_Expected_SMSF__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Implementation_Expected_SMSF__c"
+          },
+          {
+            "name": "Implementation_IC__c",
+            "dataType": "string",
+            "sourceColumn": "Implementation_IC__c"
+          },
+          {
+            "name": "Implementation_Required__c",
+            "dataType": "boolean",
+            "sourceColumn": "Implementation_Required__c"
+          },
+          {
+            "name": "Implementation_Stage__c",
+            "dataType": "string",
+            "sourceColumn": "Implementation_Stage__c"
+          },
+          {
+            "name": "CL_Implementation_Start__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Implementation_Start__c"
+          },
+          {
+            "name": "LeadSource",
+            "dataType": "string",
+            "sourceColumn": "LeadSource"
+          },
+          {
+            "name": "Lost_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Lost_Date__c"
+          },
+          {
+            "name": "CL_Lost_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Lost_Date__c"
+          },
+          {
+            "name": "CL_Lost_Reason__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Lost_Reason__c"
+          },
+          {
+            "name": "CL_Lost_To__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Lost_To__c"
+          },
+          {
+            "name": "Opportunity_Contact__c",
+            "dataType": "string",
+            "sourceColumn": "Opportunity_Contact__c"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name"
+          },
+          {
+            "name": "OwnerId",
+            "dataType": "string",
+            "sourceColumn": "OwnerId"
+          },
+          {
+            "name": "RecordTypeId",
+            "dataType": "string",
+            "sourceColumn": "RecordTypeId"
+          },
+          {
+            "name": "CL_Owner_Email__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Owner_Email__c"
+          },
+          {
+            "name": "CL_Portfolio_Day_1_Welcome_Pack__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Portfolio_Day_1_Welcome_Pack__c"
+          },
+          {
+            "name": "CL_Portfolio_Day_14_Getting_Started__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Portfolio_Day_14_Getting_Started__c"
+          },
+          {
+            "name": "CL_Portfolio_Day_45_Progress_Check__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Portfolio_Day_45_Progress_Check__c"
+          },
+          {
+            "name": "CL_Portfolio_Day_60_Handover_to_Support__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Portfolio_Day_60_Handover_to_Support__c"
+          },
+          {
+            "name": "CL_Portfolio_Day_7_Imp_Meeting__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Portfolio_Day_7_Imp_Meeting__c"
+          },
+          {
+            "name": "CL_Portfolio_Getting_Started_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Portfolio_Getting_Started_Date__c"
+          },
+          {
+            "name": "CL_Portfolio_Handover_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Portfolio_Handover_Date__c"
+          },
+          {
+            "name": "Portfolio_IC__c",
+            "dataType": "string",
+            "sourceColumn": "Portfolio_IC__c"
+          },
+          {
+            "name": "CL_Portfolio_Implementation_Start__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Portfolio_Implementation_Start__c"
+          },
+          {
+            "name": "CL_Portfolio_Progress_Meeting_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Portfolio_Progress_Meeting_Date__c"
+          },
+          {
+            "name": "CampaignId",
+            "dataType": "string",
+            "sourceColumn": "CampaignId"
+          },
+          {
+            "name": "RCM_User__c",
+            "dataType": "string",
+            "sourceColumn": "RCM_User__c"
+          },
+          {
+            "name": "CL_Reporting_Reason__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Reporting_Reason__c"
+          },
+          {
+            "name": "CL_Sale_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Sale_Date__c"
+          },
+          {
+            "name": "CL_Sale_Type__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Sale_Type__c"
+          },
+          {
+            "name": "CL_SMSF_Minimum_Billing_Notes__c",
+            "dataType": "string",
+            "sourceColumn": "CL_SMSF_Minimum_Billing_Notes__c"
+          },
+          {
+            "name": "SPL_Stage_1_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "SPL_Stage_1_Minimum_Number__c"
+          },
+          {
+            "name": "SPL_Stage_1_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "SPL_Stage_1_Start_Date__c"
+          },
+          {
+            "name": "SPL_Stage_2_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "SPL_Stage_2_Minimum_Number__c"
+          },
+          {
+            "name": "SPL_Stage_2_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "SPL_Stage_2_Start_Date__c"
+          },
+          {
+            "name": "SPL_Stage_3_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "SPL_Stage_3_Minimum_Number__c"
+          },
+          {
+            "name": "SPL_Stage_3_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "SPL_Stage_3_Start_Date__c"
+          },
+          {
+            "name": "StageName",
+            "dataType": "string",
+            "sourceColumn": "StageName"
+          },
+          {
+            "name": "CL_Transition_Notes__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Transition_Notes__c"
+          },
+          {
+            "name": "CL_Trial_End__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Trial_End__c"
+          },
+          {
+            "name": "CL_Trial_Start__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Trial_Start__c"
+          },
+          {
+            "name": "nk_opportunity",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_opportunity"
+          },
+          {
+            "name": "sk_opportunity",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_opportunity"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "fnk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_customer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_opportunity = Source{[Schema=\"c\",Item=\"opportunity\"]}[Data]",
+                "in",
+                "    c_opportunity"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "c implementationconsultant",
+        "columns": [
+          {
+            "name": "nk_implementationconsultant",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_implementationconsultant"
+          },
+          {
+            "name": "sk_implementationconsultant",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_implementationconsultant"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "fnk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_customer"
+          },
+          {
+            "name": "implementation_ic__C",
+            "dataType": "string",
+            "sourceColumn": "implementation_ic__C"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_implementationconsultant = Source{[Schema=\"c\",Item=\"implementationconsultant\"]}[Data]",
+                "in",
+                "    c_implementationconsultant"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Feed Balance",
+        "columns": [
+          {
+            "name": "LedgerBalance",
+            "dataType": "double",
+            "sourceColumn": "LedgerBalance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FeedBalance",
+            "dataType": "double",
+            "sourceColumn": "FeedBalance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FeedBalanceDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FeedBalanceDate"
+          },
+          {
+            "name": "FeedStatus",
+            "dataType": "string",
+            "sourceColumn": "FeedStatus"
+          },
+          {
+            "name": "TD - Term",
+            "dataType": "double",
+            "sourceColumn": "term",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TD - Term Type",
+            "dataType": "int64",
+            "sourceColumn": "termtype"
+          },
+          {
+            "name": "TD - InterestRate",
+            "dataType": "double",
+            "sourceColumn": "interestrate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TD - MaturityDate",
+            "dataType": "dateTime",
+            "sourceColumn": "maturitydate"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "double",
+            "sourceColumn": "Quantity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Cost",
+            "dataType": "double",
+            "sourceColumn": "Cost",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MarketPrice",
+            "dataType": "double",
+            "sourceColumn": "MarketPrice",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MarketValue",
+            "dataType": "double",
+            "sourceColumn": "MarketValue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "fnk_feedholdingaccount",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_feedholdingaccount"
+          },
+          {
+            "name": "fsk_feedholdingaccount",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_feedholdingaccount"
+          },
+          {
+            "name": "nk_feedbalance",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_feedbalance"
+          },
+          {
+            "name": "sk_feedbalance",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_feedbalance"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_feedbalance = Source{[Schema=\"c\",Item=\"feedbalance\"]}[Data]",
+                "in",
+                "    c_feedbalance"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fund Information",
+        "columns": [
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "Business - Code",
+            "dataType": "string",
+            "sourceColumn": "Business_code"
+          },
+          {
+            "name": "Business - Description",
+            "dataType": "string",
+            "sourceColumn": "Business_description"
+          },
+          {
+            "name": "Brand - Code",
+            "dataType": "string",
+            "sourceColumn": "Brand_code"
+          },
+          {
+            "name": "Brand - Description",
+            "dataType": "string",
+            "sourceColumn": "Brand_description"
+          },
+          {
+            "name": "Brand - Status",
+            "dataType": "string",
+            "sourceColumn": "Brand_Status"
+          },
+          {
+            "name": "Fund_GUID",
+            "dataType": "string",
+            "sourceColumn": "Fund_GUID"
+          },
+          {
+            "name": "Fund_Code",
+            "dataType": "string",
+            "sourceColumn": "Fund_Code"
+          },
+          {
+            "name": "Fund_Name",
+            "dataType": "string",
+            "sourceColumn": "Fund_Name"
+          },
+          {
+            "name": "Fund_Status",
+            "dataType": "string",
+            "sourceColumn": "Fund_Status"
+          },
+          {
+            "name": "Fund_IsDemo",
+            "dataType": "boolean",
+            "sourceColumn": "Fund_IsDemo"
+          },
+          {
+            "name": "Fund_StartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_StartDate"
+          },
+          {
+            "name": "Fund_OnClassDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_OnClassDate"
+          },
+          {
+            "name": "Fund_ABN",
+            "dataType": "string",
+            "sourceColumn": "Fund_ABN"
+          },
+          {
+            "name": "Fund_FirstActivatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_FirstActivatedDate"
+          },
+          {
+            "name": "Fund_FirstActivatedBy",
+            "dataType": "string",
+            "sourceColumn": "Fund_FirstActivatedBy"
+          },
+          {
+            "name": "Fund_LastActivatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_LastActivatedDate"
+          },
+          {
+            "name": "Fund_LastActivatedBy",
+            "dataType": "string",
+            "sourceColumn": "Fund_LastActivatedBy"
+          },
+          {
+            "name": "Fund_SuspendedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_SuspendedDate"
+          },
+          {
+            "name": "Fund_SuspendedBy",
+            "dataType": "string",
+            "sourceColumn": "Fund_SuspendedBy"
+          },
+          {
+            "name": "Fund_CancelledDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Fund_CancelledDate"
+          },
+          {
+            "name": "Fund_CancelledBy",
+            "dataType": "string",
+            "sourceColumn": "Fund_CancelledBy"
+          },
+          {
+            "name": "Fund_fundtype",
+            "dataType": "string",
+            "sourceColumn": "Fund_fundtype"
+          },
+          {
+            "name": "sk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_fund"
+          },
+          {
+            "name": "fsk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_fund"
+          },
+          {
+            "name": "FeedAc - ID",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_guid"
+          },
+          {
+            "name": "FeedAc - BankAccountId",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_BankAccountId"
+          },
+          {
+            "name": "FeedAc - ExternalIdentifier",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_ExternalIdentifier"
+          },
+          {
+            "name": "feedaccount_ProductType",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_ProductType"
+          },
+          {
+            "name": "feedaccount_ProviderName",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_ProviderName"
+          },
+          {
+            "name": "FeedAc - FeedStatus",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_FeedStatus"
+          },
+          {
+            "name": "FeedAc - StatusEffectiveDate",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_FeedStatusEffectiveDate"
+          },
+          {
+            "name": "FeedAc - AuthorisationType",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AuthorisationType"
+          },
+          {
+            "name": "FeedAc - AuthorisationStatus",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AuthorisationStatus"
+          },
+          {
+            "name": "FeedAc - AdviserId",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AdviserId"
+          },
+          {
+            "name": "FeedAc - AdviserName",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AdviserName"
+          },
+          {
+            "name": "FeedAc - FirstProcessed",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_FirstProcessed"
+          },
+          {
+            "name": "FeedAc - LastProcessed",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_LastProcessed"
+          },
+          {
+            "name": "FeedAc - Status Code",
+            "dataType": "int64",
+            "sourceColumn": "feedaccount_effectivestatuscode"
+          },
+          {
+            "name": "FeedAc - Status Date",
+            "dataType": "dateTime",
+            "sourceColumn": "feedaccount_effectivestatusdatetime"
+          },
+          {
+            "name": "FeedAc - AccountName",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AccountName"
+          },
+          {
+            "name": "FeedAc - FeedDescription",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_FeedDescription"
+          },
+          {
+            "name": "FeedAc - DefaultDisplayName",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_DefaultDisplayName"
+          },
+          {
+            "name": "FeedAc - HIN",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_HIN"
+          },
+          {
+            "name": "FeedAc - BSB",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_BSB"
+          },
+          {
+            "name": "feedaccount_HasAuthorityProcess",
+            "dataType": "boolean",
+            "sourceColumn": "feedaccount_HasAuthorityProcess"
+          },
+          {
+            "name": "FeedAc - AuthorityUploaded",
+            "dataType": "boolean",
+            "sourceColumn": "feedaccount_AuthorityUploaded"
+          },
+          {
+            "name": "FeedAc - AuthorityId",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_AuthorityId"
+          },
+          {
+            "name": "feedaccount_fsk_feedprovider",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "feedaccount_fsk_feedprovider"
+          },
+          {
+            "name": "feedaccount_fsk_feedproduct",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "feedaccount_fsk_feedproduct"
+          },
+          {
+            "name": "sk_feedaccount",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_feedaccount"
+          },
+          {
+            "name": "feedaccount_status",
+            "dataType": "string",
+            "sourceColumn": "feedaccount_status"
+          },
+          {
+            "name": "holdingaccount_Id",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_Id"
+          },
+          {
+            "name": "holdingaccount_Code",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_Code"
+          },
+          {
+            "name": "holdingaccount_Description",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_Description"
+          },
+          {
+            "name": "holdingaccount_MarketType",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_MarketType"
+          },
+          {
+            "name": "holdingaccount_MarketCode",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_MarketCode"
+          },
+          {
+            "name": "holdingaccount_EffectiveStatusCode",
+            "dataType": "int64",
+            "sourceColumn": "holdingaccount_EffectiveStatusCode"
+          },
+          {
+            "name": "holdingaccount_effectivestatusdatetime",
+            "dataType": "dateTime",
+            "sourceColumn": "holdingaccount_effectivestatusdatetime"
+          },
+          {
+            "name": "holdingaccount_AssetPoolName",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_AssetPoolName"
+          },
+          {
+            "name": "holdingaccount_SecurityIssueCode",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_SecurityIssueCode"
+          },
+          {
+            "name": "holdingaccount_GLInvestmentClassificationDescription",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_GLInvestmentClassificationDescription"
+          },
+          {
+            "name": "holdingaccount_GLInvestmentClassificationCode",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_GLInvestmentClassificationCode"
+          },
+          {
+            "name": "HoldingAc - Type",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_Type"
+          },
+          {
+            "name": "holdingaccount_BsbCode",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_BsbCode"
+          },
+          {
+            "name": "holdingaccount_AccountNumber",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_AccountNumber"
+          },
+          {
+            "name": "holdingaccount_AccountName",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_AccountName"
+          },
+          {
+            "name": "sk_feedholdingaccount",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_feedholdingaccount"
+          },
+          {
+            "name": "holdingaccount_effectivestatus",
+            "dataType": "string",
+            "sourceColumn": "holdingaccount_effectivestatus"
+          },
+          {
+            "name": "feedstate_description",
+            "dataType": "string",
+            "sourceColumn": "feedstate_description"
+          },
+          {
+            "name": "feedstate_console_category",
+            "dataType": "string",
+            "sourceColumn": "feedstate_console_category"
+          },
+          {
+            "name": "FeedState - Category",
+            "dataType": "string",
+            "sourceColumn": "feedstate_category"
+          },
+          {
+            "name": "feedstate_possible_feed",
+            "dataType": "string",
+            "sourceColumn": "feedstate_possible_feed"
+          },
+          {
+            "name": "FeedState - CalculatedValue",
+            "dataType": "boolean",
+            "sourceColumn": "feedstate_calculated_value"
+          },
+          {
+            "name": "feedstate_source_system_value",
+            "dataType": "string",
+            "sourceColumn": "feedstate_source_system_value"
+          },
+          {
+            "name": "Provider - ID",
+            "dataType": "string",
+            "sourceColumn": "Provider_guid"
+          },
+          {
+            "name": "Provider - Name",
+            "dataType": "string",
+            "sourceColumn": "Provider_name"
+          },
+          {
+            "name": "Provider_defaultbankingproduct",
+            "dataType": "string",
+            "sourceColumn": "Provider_defaultbankingproduct"
+          },
+          {
+            "name": "Provider_defaultbrokingproduct",
+            "dataType": "string",
+            "sourceColumn": "Provider_defaultbrokingproduct"
+          },
+          {
+            "name": "Provider_defaultwrapproduct",
+            "dataType": "string",
+            "sourceColumn": "Provider_defaultwrapproduct"
+          },
+          {
+            "name": "Provider_dateadded",
+            "dataType": "dateTime",
+            "sourceColumn": "Provider_dateadded"
+          },
+          {
+            "name": "Provider - Status Code",
+            "dataType": "int64",
+            "sourceColumn": "Provider_effectivestatuscode"
+          },
+          {
+            "name": "Provider_code",
+            "dataType": "string",
+            "sourceColumn": "Provider_code"
+          },
+          {
+            "name": "sk_feedprovider",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_feedprovider"
+          },
+          {
+            "name": "Provider_effectivestatus",
+            "dataType": "string",
+            "sourceColumn": "Provider_effectivestatus"
+          },
+          {
+            "name": "Product_guid",
+            "dataType": "string",
+            "sourceColumn": "Product_guid"
+          },
+          {
+            "name": "Product_name",
+            "dataType": "string",
+            "sourceColumn": "Product_name"
+          },
+          {
+            "name": "fsk_feedprovider",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_feedprovider"
+          },
+          {
+            "name": "fnk_feedprovider",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_feedprovider"
+          },
+          {
+            "name": "Product_providername",
+            "dataType": "string",
+            "sourceColumn": "Product_providername"
+          },
+          {
+            "name": "Product_feedsource",
+            "dataType": "string",
+            "sourceColumn": "Product_feedsource"
+          },
+          {
+            "name": "Product_producttype",
+            "dataType": "string",
+            "sourceColumn": "Product_producttype"
+          },
+          {
+            "name": "Product_producttypecode",
+            "dataType": "int64",
+            "sourceColumn": "Product_producttypecode"
+          },
+          {
+            "name": "Product_obsolete",
+            "dataType": "boolean",
+            "sourceColumn": "Product_obsolete"
+          },
+          {
+            "name": "Product - Feed Enabled",
+            "dataType": "boolean",
+            "sourceColumn": "Product_feedenabled"
+          },
+          {
+            "name": "Product - Status Code",
+            "dataType": "int64",
+            "sourceColumn": "Product_effectivestatuscode"
+          },
+          {
+            "name": "sk_feedproduct",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_feedproduct"
+          },
+          {
+            "name": "Product - Status",
+            "dataType": "string",
+            "sourceColumn": "Product_effectivestatus"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_fundfeed = Source{[Schema=\"c\",Item=\"fundfeed\"]}[Data]",
+                "in",
+                "    c_fundfeed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Business - Count",
+            "expression": "calculate(DISTINCTCOUNT([Business - Code]),'Fund Information'[Business - Code]<>BLANK())"
+          },
+          {
+            "name": "FeedAccount - Count",
+            "expression": "calculate(DISTINCTCOUNT([FeedAc - ID]),'Fund Information'[FeedAc - ID]<>BLANK())"
+          },
+          {
+            "name": "Brand - Count",
+            "expression": "calculate(DISTINCTCOUNT([Brand - Code]),'Fund Information'[Brand - Code]<>BLANK())"
+          },
+          {
+            "name": "Fund - Count",
+            "expression": "calculate(DISTINCTCOUNT([Fund_GUID]),'Fund Information'[Fund_GUID]<>BLANK())"
+          },
+          {
+            "name": "HoldingAccount - Count",
+            "expression": "calculate(DISTINCTCOUNT([holdingaccount_id]),'Fund Information'[holdingaccount_id]<>BLANK())"
+          },
+          {
+            "name": "Provider - Count",
+            "expression": "calculate(DISTINCTCOUNT([Provider - ID]),'Fund Information'[Provider - ID]<>BLANK())"
+          },
+          {
+            "name": "Product - Count",
+            "expression": "calculate(DISTINCTCOUNT([Product_guid]),'Fund Information'[Product_guid]<>BLANK())"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "01f2a19e-a40f-42f1-85b5-6d796da3c7de",
+        "fromTable": "c implementationconsultant",
+        "fromColumn": "fsk_customer",
+        "toTable": "c customer",
+        "toColumn": "sk_customer"
+      },
+      {
+        "name": "3f2f92a4-2687-4a5c-8cdb-29a03a4c5a9c",
+        "fromTable": "Opportunity",
+        "fromColumn": "fsk_customer",
+        "toTable": "c customer",
+        "toColumn": "sk_customer"
+      },
+      {
+        "name": "66a4b61a-7ad5-4416-b6de-75c7e60b479c",
+        "fromTable": "Fund Information",
+        "fromColumn": "fsk_customer",
+        "toTable": "c customer",
+        "toColumn": "sk_customer"
+      },
+      {
+        "name": "9109f520-c30d-4c41-aee3-50bd6978cf41",
+        "fromTable": "Fund Information",
+        "fromColumn": "sk_feedholdingaccount",
+        "toTable": "Feed Balance",
+        "toColumn": "fsk_feedholdingaccount"
+      }
+    ],
+    "roles": [
+      {
+        "name": "Admin",
+        "modelPermission": "administrator",
+        "members": [
+          {
+            "memberName": "BUILTIN\\Administrators",
+            "memberId": "S-1-5-32-544"
+          }
+        ]
+      },
+      {
+        "name": "ReadOnly",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "CLASSDB\\SSAS_COMS_BI_Read_Only",
+            "memberId": "S-1-5-21-3512974274-4206694544-3371932454-1297"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
