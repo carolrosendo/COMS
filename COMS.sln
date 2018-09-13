@@ -3,21 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "COMS", "COMS\COMS.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
-EndProject
 Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "COMS_Model", "COMS_Model\COMS_Model.smproj", "{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|x86 = Development|x86
+		Production|x86 = Production|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
-		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
-		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
 		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Development|x86.ActiveCfg = Development|x86
 		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Development|x86.Build.0 = Development|x86
 		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Development|x86.Deploy.0 = Development|x86
+		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Production|x86.ActiveCfg = Production|x86
+		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Production|x86.Build.0 = Production|x86
+		{E8A5A572-456A-42DE-B2BA-D009D8E8A7B5}.Production|x86.Deploy.0 = Production|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,16 +10,17 @@
         "connectionDetails": {
           "protocol": "tds",
           "address": {
-            "server": "172.30.16.20",
+            "server": "localhost",
             "database": "coms_bi"
           },
           "authentication": null,
           "query": null
         },
         "credential": {
-          "AuthenticationKind": "ServiceAccount",
+          "AuthenticationKind": "Windows",
           "kind": "SQL",
-          "path": "172.30.16.20;coms_bi",
+          "path": "localhost;coms_bi",
+          "Username": "CLASSDB\\greg",
           "EncryptConnection": false
         }
       }
@@ -96,8 +97,7 @@
           {
             "name": "CL_Billing_Cap__c",
             "dataType": "double",
-            "sourceColumn": "CL_Billing_Cap__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_Billing_Cap__c"
           },
           {
             "name": "Cap_Stage_2_End_Date__c",
@@ -107,8 +107,7 @@
           {
             "name": "Cap_Stage_2_Units__c",
             "dataType": "double",
-            "sourceColumn": "Cap_Stage_2_Units__c",
-            "summarizeBy": "none"
+            "sourceColumn": "Cap_Stage_2_Units__c"
           },
           {
             "name": "CL_Class_Business_Code__c",
@@ -143,8 +142,7 @@
           {
             "name": "NumberOfEmployees",
             "dataType": "int64",
-            "sourceColumn": "NumberOfEmployees",
-            "summarizeBy": "none"
+            "sourceColumn": "NumberOfEmployees"
           },
           {
             "name": "FundSuspensionLastFollowUp__c",
@@ -154,14 +152,12 @@
           {
             "name": "CL_Lite_Funds__c",
             "dataType": "double",
-            "sourceColumn": "CL_Lite_Funds__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_Lite_Funds__c"
           },
           {
             "name": "CL_Lite_p_a_Discount__c",
             "dataType": "double",
-            "sourceColumn": "CL_Lite_p_a_Discount__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_Lite_p_a_Discount__c"
           },
           {
             "name": "CL_Member_Of__c",
@@ -196,14 +192,12 @@
           {
             "name": "CL_Portfolio_per_month_rate__c",
             "dataType": "double",
-            "sourceColumn": "CL_Portfolio_per_month_rate__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_Portfolio_per_month_rate__c"
           },
           {
             "name": "CL_Portfolio_Rate__c",
             "dataType": "double",
-            "sourceColumn": "CL_Portfolio_Rate__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_Portfolio_Rate__c"
           },
           {
             "name": "CL_Practice_Management_Platform__c",
@@ -238,20 +232,17 @@
           {
             "name": "CL_SMSF_p_a_Rate__c",
             "dataType": "double",
-            "sourceColumn": "CL_SMSF_p_a_Rate__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_SMSF_p_a_Rate__c"
           },
           {
             "name": "CL_SMSF_per_month_rate__c",
             "dataType": "double",
-            "sourceColumn": "CL_SMSF_per_month_rate__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_SMSF_per_month_rate__c"
           },
           {
             "name": "CL_SMSF_Required_Before_Lite__c",
             "dataType": "double",
-            "sourceColumn": "CL_SMSF_Required_Before_Lite__c",
-            "summarizeBy": "none"
+            "sourceColumn": "CL_SMSF_Required_Before_Lite__c"
           },
           {
             "name": "CL_SMSF_Volume_Discount__c",
@@ -391,8 +382,7 @@
           {
             "name": "customerage",
             "dataType": "int64",
-            "sourceColumn": "customerage",
-            "summarizeBy": "none"
+            "sourceColumn": "customerage"
           },
           {
             "name": "sk_customer",
@@ -438,96 +428,6 @@
             "name": "AdministratorSize",
             "dataType": "string",
             "sourceColumn": "AdministratorSize"
-          },
-          {
-            "name": "ic_FirstName",
-            "dataType": "string",
-            "sourceColumn": "ic_FirstName"
-          },
-          {
-            "name": "ic_LastName",
-            "dataType": "string",
-            "sourceColumn": "ic_LastName"
-          },
-          {
-            "name": "ic_Name",
-            "dataType": "string",
-            "sourceColumn": "ic_Name"
-          },
-          {
-            "name": "ic_Alias",
-            "dataType": "string",
-            "sourceColumn": "ic_Alias"
-          },
-          {
-            "name": "ic_Email",
-            "dataType": "string",
-            "sourceColumn": "ic_Email"
-          },
-          {
-            "name": "ic_Username",
-            "dataType": "string",
-            "sourceColumn": "ic_Username"
-          },
-          {
-            "name": "bc_FirstName",
-            "dataType": "string",
-            "sourceColumn": "bc_FirstName"
-          },
-          {
-            "name": "bc_LastName",
-            "dataType": "string",
-            "sourceColumn": "bc_LastName"
-          },
-          {
-            "name": "bc_Name",
-            "dataType": "string",
-            "sourceColumn": "bc_Name"
-          },
-          {
-            "name": "bc_Email",
-            "dataType": "string",
-            "sourceColumn": "bc_Email"
-          },
-          {
-            "name": "bc_leadsource",
-            "dataType": "string",
-            "sourceColumn": "bc_leadsource"
-          },
-          {
-            "name": "owner_FirstName",
-            "dataType": "string",
-            "sourceColumn": "owner_FirstName"
-          },
-          {
-            "name": "owner_LastName",
-            "dataType": "string",
-            "sourceColumn": "owner_LastName"
-          },
-          {
-            "name": "owner_Name",
-            "dataType": "string",
-            "sourceColumn": "owner_Name"
-          },
-          {
-            "name": "owner_Alias",
-            "dataType": "string",
-            "sourceColumn": "owner_Alias"
-          },
-          {
-            "name": "owner_Email",
-            "dataType": "string",
-            "sourceColumn": "owner_Email"
-          },
-          {
-            "name": "owner_Username",
-            "dataType": "string",
-            "sourceColumn": "owner_Username"
-          },
-          {
-            "name": "LiveDate",
-            "dataType": "dateTime",
-            "sourceColumn": "LiveDate"
           }
         ],
         "partitions": [
@@ -903,64 +803,6 @@
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "fnk_customer"
-          },
-          {
-            "type": "calculated",
-            "name": "Opty - Implementation Age",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "if( (Opportunity[CL_Implementation_Start__c]<>BLANK() && Opportunity[CL_Implementation_Start__c] <= today() ), DATEDIFF(Opportunity[CL_Implementation_Start__c],today(),DAY),DATEDIFF(today(),today(),DAY))",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "ic_FirstName",
-            "dataType": "string",
-            "sourceColumn": "ic_FirstName"
-          },
-          {
-            "name": "ic_LastName",
-            "dataType": "string",
-            "sourceColumn": "ic_LastName"
-          },
-          {
-            "name": "ic_Name",
-            "dataType": "string",
-            "sourceColumn": "ic_Name"
-          },
-          {
-            "name": "ic_Alias",
-            "dataType": "string",
-            "sourceColumn": "ic_Alias"
-          },
-          {
-            "name": "ic_Email",
-            "dataType": "string",
-            "sourceColumn": "ic_Email"
-          },
-          {
-            "name": "ic_Username",
-            "dataType": "string",
-            "sourceColumn": "ic_Username"
-          },
-          {
-            "name": "oc_FirstName",
-            "dataType": "string",
-            "sourceColumn": "oc_FirstName"
-          },
-          {
-            "name": "oc_LastName",
-            "dataType": "string",
-            "sourceColumn": "oc_LastName"
-          },
-          {
-            "name": "oc_Name",
-            "dataType": "string",
-            "sourceColumn": "oc_Name"
-          },
-          {
-            "name": "oc_Email",
-            "dataType": "string",
-            "sourceColumn": "oc_Email"
           }
         ],
         "partitions": [
@@ -1031,34 +873,9 @@
             "sourceColumn": "implementation_ic__C"
           },
           {
-            "name": "FirstName",
-            "dataType": "string",
-            "sourceColumn": "FirstName"
-          },
-          {
-            "name": "LastName",
-            "dataType": "string",
-            "sourceColumn": "LastName"
-          },
-          {
-            "name": "Name",
-            "dataType": "string",
-            "sourceColumn": "Name"
-          },
-          {
-            "name": "Alias",
-            "dataType": "string",
-            "sourceColumn": "Alias"
-          },
-          {
-            "name": "Email",
-            "dataType": "string",
-            "sourceColumn": "Email"
-          },
-          {
-            "name": "Username",
-            "dataType": "string",
-            "sourceColumn": "Username"
+            "name": "ONE",
+            "dataType": "int64",
+            "sourceColumn": "ONE"
           }
         ],
         "partitions": [
@@ -1112,8 +929,7 @@
           {
             "name": "TD - Term Type",
             "dataType": "int64",
-            "sourceColumn": "termtype",
-            "summarizeBy": "none"
+            "sourceColumn": "termtype"
           },
           {
             "name": "TD - InterestRate",
@@ -1409,8 +1225,7 @@
           {
             "name": "FeedAc - Status Code",
             "dataType": "int64",
-            "sourceColumn": "feedaccount_effectivestatuscode",
-            "summarizeBy": "none"
+            "sourceColumn": "feedaccount_effectivestatuscode"
           },
           {
             "name": "FeedAc - Status Date",
@@ -1508,8 +1323,7 @@
           {
             "name": "HoldingAc - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "holdingaccount_EffectiveStatusCode",
-            "summarizeBy": "none"
+            "sourceColumn": "holdingaccount_EffectiveStatusCode"
           },
           {
             "name": "HoldingAc - StatusDate",
@@ -1593,6 +1407,11 @@
             "sourceColumn": "feedstate_calculated_value"
           },
           {
+            "name": "FeedState - SourceSystemValue",
+            "dataType": "string",
+            "sourceColumn": "feedstate_source_system_value"
+          },
+          {
             "name": "Business - Status",
             "dataType": "string",
             "sourceColumn": "Business_Status"
@@ -1600,8 +1419,7 @@
           {
             "name": "Business - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "Business_effectivestatuscode",
-            "summarizeBy": "none"
+            "sourceColumn": "Business_effectivestatuscode"
           },
           {
             "name": "Business - StatusDate",
@@ -1611,8 +1429,7 @@
           {
             "name": "Brand - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "Brand_effectivestatuscode",
-            "summarizeBy": "none"
+            "sourceColumn": "Brand_effectivestatuscode"
           },
           {
             "name": "Brand - StatusDate",
@@ -1652,8 +1469,7 @@
           {
             "name": "Provider - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "Provider_effectivestatuscode",
-            "summarizeBy": "none"
+            "sourceColumn": "Provider_effectivestatuscode"
           },
           {
             "name": "Provider - Code",
@@ -1711,8 +1527,7 @@
           {
             "name": "Product - TypeCode",
             "dataType": "int64",
-            "sourceColumn": "Product_producttypecode",
-            "summarizeBy": "none"
+            "sourceColumn": "Product_producttypecode"
           },
           {
             "name": "Product - Obsolete",
@@ -1727,8 +1542,7 @@
           {
             "name": "Product - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "Product_effectivestatuscode",
-            "summarizeBy": "none"
+            "sourceColumn": "Product_effectivestatuscode"
           },
           {
             "name": "sk_feedproduct",
@@ -1742,187 +1556,16 @@
             "sourceColumn": "Product_effectivestatus"
           },
           {
-            "name": "Business - ID",
+            "name": "nk_business",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "nk_business"
           },
           {
-            "name": "Brand - ID",
+            "name": "nk_brand",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "nk_brand"
-          },
-          {
-            "type": "calculated",
-            "name": "FeedAc - Status Age Group",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "if('Fund Information'[FeedAc - Status] = \"Active\",",
-              "\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=3,",
-              "\t\t\"A. <3 mths\",",
-              "\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=6,",
-              "\t\t\t\"B. 3-6 mths\",",
-              "\t\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=9,",
-              "\t\t\t\t\"C. 6-9 mths\",",
-              "\t\t\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=12,",
-              "\t\t\t\t\t\"D. 9-12 mths\",",
-              "\t\t\t\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) >12,",
-              "\t\t\t\t\t\t\"E. >12 mths\",\"Z. No Data\"))))),",
-              "\tBLANK())"
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "FeedAc - Live Age Group",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "if('Fund Information'[FeedAc - FirstProcessed Date] = BLANK(),",
-              "\t\"Z. No Data\",",
-              "\tif(DATEDIFF('Fund Information'[FeedAc - FirstProcessed Date],TODAY(),MONTH) <=3,",
-              "\t\t\"A. <3 mths\",",
-              "\t\tif(DATEDIFF('Fund Information'[FeedAc - FirstProcessed Date],TODAY(),MONTH) <=6,",
-              "\t\t\t\"B. 3-6 mths\",",
-              "\t\t\tif(DATEDIFF('Fund Information'[FeedAc - FirstProcessed Date],TODAY(),MONTH) <=9,",
-              "\t\t\t\t\"C. 6-9 mths\",",
-              "\t\t\t\tif(DATEDIFF('Fund Information'[FeedAc - FirstProcessed Date],TODAY(),MONTH) <=12,",
-              "\t\t\t\t\t\"D. 9-12 mths\",",
-              "\t\t\t\t\tif(DATEDIFF('Fund Information'[FeedAc - FirstProcessed Date],TODAY(),MONTH) >12,",
-              "\t\t\t\t\t\t\"E. >12 mths\",\"Z. No Data\"))))))"
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "FeedAc - FirstProcessed Date",
-            "dataType": "dateTime",
-            "isDataTypeInferred": true,
-            "expression": "DATE(left('Fund Information'[FeedAc - FirstProcessed],4),MID('Fund Information'[FeedAc - FirstProcessed],6,2),MID('Fund Information'[FeedAc - FirstProcessed],9,2))"
-          },
-          {
-            "name": "FeedAc - AdviserCode",
-            "dataType": "string",
-            "sourceColumn": "feedaccount_AdviserCode"
-          },
-          {
-            "name": "FeedAc - Activate Date",
-            "dataType": "dateTime",
-            "sourceColumn": "feedaccount_activatedate"
-          },
-          {
-            "name": "FeedAc - FeedStatus Calculated",
-            "dataType": "string",
-            "sourceColumn": "feedaccount_FeedStatus_Calculated"
-          },
-          {
-            "name": "FeedAc - Filtered List",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - Filtered List"
-          },
-          {
-            "name": "HoldingAc - FeedCandidate",
-            "dataType": "string",
-            "sourceColumn": "HoldingAc - FeedCandidate"
-          },
-          {
-            "name": "HoldingAc - Count Unlinked",
-            "dataType": "int64",
-            "sourceColumn": "HoldingAc - Count Unlinked"
-          },
-          {
-            "name": "FeedAc - isFeedAccount",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - isFeedAccount"
-          },
-          {
-            "name": "FeedAc - isContribution",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - isContribution"
-          },
-          {
-            "name": "FeedAc - isTermDeposit",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - isTermDeposit"
-          },
-          {
-            "name": "FeedAc - Keyword Search",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - Keyword Search"
-          },
-          {
-            "name": "Fund - Live Fund",
-            "dataType": "string",
-            "sourceColumn": "Fund - Live Fund"
-          },
-          {
-            "name": "Fund - Live Portfolio",
-            "dataType": "string",
-            "sourceColumn": "Fund - Live Portfolio"
-          },
-          {
-            "name": "FeedAc - Live Account",
-            "dataType": "string",
-            "sourceColumn": "FeedAc - Live Account"
-          },
-          {
-            "type": "calculated",
-            "name": "FeedAc - LastProcessed Date",
-            "dataType": "dateTime",
-            "isDataTypeInferred": true,
-            "expression": "DATE(left('Fund Information'[FeedAc - LastProcessed],4),MID('Fund Information'[FeedAc - LastProcessed],6,2),MID('Fund Information'[FeedAc - LastProcessed],9,2))"
-          },
-          {
-            "name": "Fund - Live Account",
-            "dataType": "string",
-            "sourceColumn": "Fund - Live Accounts"
-          },
-          {
-            "type": "calculated",
-            "name": "ZZ - Live Account",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "isHidden": true,
-            "expression": "'Fund Information'[FeedAc - Live Account]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
-          },
-          {
-            "type": "calculated",
-            "name": "ZZ - Live Funds",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "isHidden": true,
-            "expression": "'Fund Information'[Fund - Live Fund]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
-          },
-          {
-            "type": "calculated",
-            "name": "ZZ - Live Portfolios",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "isHidden": true,
-            "expression": "'Fund Information'[Fund - Live Portfolio]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
-          },
-          {
-            "type": "calculated",
-            "name": "ZZ - Fund Live Accounts",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "isHidden": true,
-            "expression": "'Fund Information'[Fund - Live Account]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
-          },
-          {
-            "name": "FeedState - Actor",
-            "dataType": "string",
-            "sourceColumn": "feedstate_feed_state_actor"
-          },
-          {
-            "type": "calculated",
-            "name": "ZZ - isFeedAccount",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "expression": "'Fund Information'[FeedAc - isFeedAccount]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
           }
         ],
         "partitions": [
@@ -1944,15 +1587,15 @@
         "measures": [
           {
             "name": "Business - Count",
-            "expression": "calculate(DISTINCTCOUNT([Business - ID]),'Fund Information'[Business - ID]<>BLANK())"
+            "expression": "calculate(DISTINCTCOUNT([nk_business]),'Fund Information'[nk_business]<>BLANK())"
           },
           {
-            "name": "FeedAc - Count",
+            "name": "FeedAccount - Count",
             "expression": "calculate(DISTINCTCOUNT([FeedAc - ID]),'Fund Information'[FeedAc - ID]<>BLANK())"
           },
           {
             "name": "Brand - Count",
-            "expression": "calculate(DISTINCTCOUNT([Brand - ID]),'Fund Information'[Brand - ID]<>BLANK())"
+            "expression": "calculate(DISTINCTCOUNT([nk_brand]),'Fund Information'[nk_brand]<>BLANK())"
           },
           {
             "name": "Fund - Count",
@@ -1969,31 +1612,18 @@
           {
             "name": "Product - Count",
             "expression": "calculate(DISTINCTCOUNT([Product - ID]),'Fund Information'[Product - ID]<>BLANK())"
-          },
-          {
-            "name": "FeedAc - Accounts",
-            "expression": "calculate(DISTINCTCOUNT([FeedAc - ID]),'Fund Information'[ZZ - isFeedAccount]=TRUE)"
-          },
-          {
-            "name": "FeedAc - Live Accounts",
-            "expression": "calculate(DISTINCTCOUNT([FeedAc - ID]),'Fund Information'[ZZ - Live Account]=TRUE)"
-          },
-          {
-            "name": "Fund - Live Funds",
-            "expression": "calculate(DISTINCTCOUNT([Fund - ID]),'Fund Information'[ZZ - Live Funds]= TRUE)"
-          },
-          {
-            "name": "Fund - Live Portfolios",
-            "expression": "calculate(DISTINCTCOUNT([Fund - ID]),'Fund Information'[ZZ - Live Portfolios]= TRUE)"
-          },
-          {
-            "name": "Fund - Live Accounts",
-            "expression": "calculate(DISTINCTCOUNT([Fund - ID]),'Fund Information'[ZZ - Fund Live Accounts]=TRUE)"
           }
         ]
       }
     ],
     "relationships": [
+      {
+        "name": "01f2a19e-a40f-42f1-85b5-6d796da3c7de",
+        "fromTable": "c implementationconsultant",
+        "fromColumn": "fsk_customer",
+        "toTable": "c customer",
+        "toColumn": "sk_customer"
+      },
       {
         "name": "3f2f92a4-2687-4a5c-8cdb-29a03a4c5a9c",
         "fromTable": "Opportunity",
@@ -2009,19 +1639,11 @@
         "toColumn": "sk_customer"
       },
       {
-        "name": "694e3369-9e90-4df9-817f-1c6398761f5b",
-        "fromTable": "c implementationconsultant",
-        "fromColumn": "fsk_customer",
-        "toTable": "c customer",
-        "toColumn": "sk_customer"
-      },
-      {
-        "name": "7928b408-5319-42ff-a8a9-fd44444be117",
+        "name": "9109f520-c30d-4c41-aee3-50bd6978cf41",
         "fromTable": "Fund Information",
         "fromColumn": "sk_feedholdingaccount",
         "toTable": "Feed Balance",
-        "toColumn": "fsk_feedholdingaccount",
-        "crossFilteringBehavior": "bothDirections"
+        "toColumn": "fsk_feedholdingaccount"
       }
     ],
     "roles": [
@@ -2032,14 +1654,6 @@
           {
             "memberName": "BUILTIN\\Administrators",
             "memberId": "S-1-5-32-544"
-          },
-          {
-            "memberName": "CLASSDBPROD\\powerbiservice",
-            "memberId": "S-1-5-21-862139309-830364973-991049431-1110"
-          },
-          {
-            "memberName": "CLASSDBPROD\\dev_powerbiservice",
-            "memberId": "S-1-5-21-862139309-830364973-991049431-1605"
           }
         ]
       },
@@ -2048,12 +1662,8 @@
         "modelPermission": "read",
         "members": [
           {
-            "memberName": "CLASSDBPROD\\SSAS COMS BI ReadOnly",
-            "memberId": "S-1-5-21-862139309-830364973-991049431-1604"
-          },
-          {
-            "memberName": "CLASSDBPROD\\Dev SSAS COMS BI ReadOny",
-            "memberId": "S-1-5-21-862139309-830364973-991049431-1607"
+            "memberName": "CLASSDB\\SSAS_COMS_BI_Read_Only",
+            "memberId": "S-1-5-21-3512974274-4206694544-3371932454-1297"
           }
         ]
       }
