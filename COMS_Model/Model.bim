@@ -26,536 +26,8 @@
     ],
     "tables": [
       {
-        "name": "c customer",
-        "columns": [
-          {
-            "name": "Id",
-            "dataType": "string",
-            "sourceColumn": "Id"
-          },
-          {
-            "name": "name",
-            "dataType": "string",
-            "sourceColumn": "name"
-          },
-          {
-            "name": "abn_acn",
-            "dataType": "string",
-            "sourceColumn": "abn_acn"
-          },
-          {
-            "name": "ownerid",
-            "dataType": "string",
-            "sourceColumn": "ownerid"
-          },
-          {
-            "name": "recordtype",
-            "dataType": "string",
-            "sourceColumn": "recordtype"
-          },
-          {
-            "name": "billingaddress",
-            "dataType": "string",
-            "sourceColumn": "billingaddress"
-          },
-          {
-            "name": "billingcontact",
-            "dataType": "string",
-            "sourceColumn": "billingcontact"
-          },
-          {
-            "name": "billingend",
-            "dataType": "dateTime",
-            "sourceColumn": "billingend"
-          },
-          {
-            "name": "billingname",
-            "dataType": "string",
-            "sourceColumn": "billingname"
-          },
-          {
-            "name": "billingstartdate",
-            "dataType": "dateTime",
-            "sourceColumn": "billingstartdate"
-          },
-          {
-            "name": "businesstype",
-            "dataType": "string",
-            "sourceColumn": "businesstype"
-          },
-          {
-            "name": "businesstype2",
-            "dataType": "string",
-            "sourceColumn": "businesstype2"
-          },
-          {
-            "name": "Cap_Stage_1_End_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "Cap_Stage_1_End_Date__c"
-          },
-          {
-            "name": "CL_Billing_Cap__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Billing_Cap__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Cap_Stage_2_End_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "Cap_Stage_2_End_Date__c"
-          },
-          {
-            "name": "Cap_Stage_2_Units__c",
-            "dataType": "double",
-            "sourceColumn": "Cap_Stage_2_Units__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_Class_Business_Code__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Class_Business_Code__c"
-          },
-          {
-            "name": "CL_Contract_Type__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Contract_Type__c"
-          },
-          {
-            "name": "CL_Contracted_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Contracted_Date__c"
-          },
-          {
-            "name": "CL_Countplus_Firm__c",
-            "dataType": "boolean",
-            "sourceColumn": "CL_Countplus_Firm__c"
-          },
-          {
-            "name": "CL_Data_Use_Restrictions__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Data_Use_Restrictions__c"
-          },
-          {
-            "name": "CL_Date_Termination_Requested__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Date_Termination_Requested__c"
-          },
-          {
-            "name": "NumberOfEmployees",
-            "dataType": "int64",
-            "sourceColumn": "NumberOfEmployees",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "FundSuspensionLastFollowUp__c",
-            "dataType": "dateTime",
-            "sourceColumn": "FundSuspensionLastFollowUp__c"
-          },
-          {
-            "name": "CL_Lite_Funds__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Lite_Funds__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_Lite_p_a_Discount__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Lite_p_a_Discount__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_Member_Of__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Member_Of__c"
-          },
-          {
-            "name": "CL_Class_Admin_Partners__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Class_Admin_Partners__c"
-          },
-          {
-            "name": "ParentId",
-            "dataType": "string",
-            "sourceColumn": "ParentId"
-          },
-          {
-            "name": "CL_Partner_Agreement__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Partner_Agreement__c"
-          },
-          {
-            "name": "CL_Portfolio_Contract__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Portfolio_Contract__c"
-          },
-          {
-            "name": "CL_Portfolio_Discounting__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Portfolio_Discounting__c"
-          },
-          {
-            "name": "CL_Portfolio_per_month_rate__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Portfolio_per_month_rate__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_Portfolio_Rate__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Portfolio_Rate__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_Practice_Management_Platform__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Practice_Management_Platform__c"
-          },
-          {
-            "name": "CL_Pre_Class_Portfolio_System__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Pre_Class_Portfolio_System__c"
-          },
-          {
-            "name": "CL_Pre_Class_SMSF_Platform__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Pre_Class_SMSF_Platform__c"
-          },
-          {
-            "name": "Pricing_model__c",
-            "dataType": "string",
-            "sourceColumn": "Pricing_model__c"
-          },
-          {
-            "name": "CL_Referred_to_Admin__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Referred_to_Admin__c"
-          },
-          {
-            "name": "CL_Sales_Territory__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Sales_Territory__c"
-          },
-          {
-            "name": "CL_SMSF_p_a_Rate__c",
-            "dataType": "double",
-            "sourceColumn": "CL_SMSF_p_a_Rate__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_SMSF_per_month_rate__c",
-            "dataType": "double",
-            "sourceColumn": "CL_SMSF_per_month_rate__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_SMSF_Required_Before_Lite__c",
-            "dataType": "double",
-            "sourceColumn": "CL_SMSF_Required_Before_Lite__c",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "CL_SMSF_Volume_Discount__c",
-            "dataType": "string",
-            "sourceColumn": "CL_SMSF_Volume_Discount__c"
-          },
-          {
-            "name": "SSA_Discount_Tier__c",
-            "dataType": "string",
-            "sourceColumn": "SSA_Discount_Tier__c"
-          },
-          {
-            "name": "CL_Stage_1_Minimum_Amount__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_1_Minimum_Amount__c"
-          },
-          {
-            "name": "CL_Stage_1_Minimum_Number__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_1_Minimum_Number__c"
-          },
-          {
-            "name": "CL_Stage_1_Start_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Stage_1_Start_Date__c"
-          },
-          {
-            "name": "CL_Stage_2_Minimum_Amount__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_2_Minimum_Amount__c"
-          },
-          {
-            "name": "CL_Stage_2_Minimum_Number__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_2_Minimum_Number__c"
-          },
-          {
-            "name": "CL_Stage_2_Start_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Stage_2_Start_Date__c"
-          },
-          {
-            "name": "CL_Stage_3_Minimum_Amount__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_3_Minimum_Amount__c"
-          },
-          {
-            "name": "CL_Stage_3_Minimum_Number__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Stage_3_Minimum_Number__c"
-          },
-          {
-            "name": "CL_Stage_3_Start_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Stage_3_Start_Date__c"
-          },
-          {
-            "name": "CL_Is_Standard_Contract__c",
-            "dataType": "boolean",
-            "sourceColumn": "CL_Is_Standard_Contract__c"
-          },
-          {
-            "name": "CL_Status__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Status__c"
-          },
-          {
-            "name": "CL_Tax_Platform__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Tax_Platform__c"
-          },
-          {
-            "name": "CL_TO_Billing_Email_List__c",
-            "dataType": "string",
-            "sourceColumn": "CL_TO_Billing_Email_List__c"
-          },
-          {
-            "name": "CL_Total_No_of_Portfolio__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Total_No_of_Portfolio__c"
-          },
-          {
-            "name": "CL_Total_No_of_SMSF__c",
-            "dataType": "double",
-            "sourceColumn": "CL_Total_No_of_SMSF__c"
-          },
-          {
-            "name": "Transition_Discount_Rate_Auto__c",
-            "dataType": "string",
-            "sourceColumn": "Transition_Discount_Rate_Auto__c"
-          },
-          {
-            "name": "Transition_Discount_Rate_Manual_1__c",
-            "dataType": "string",
-            "sourceColumn": "Transition_Discount_Rate_Manual_1__c"
-          },
-          {
-            "name": "Transition_Discount_Rate_Manual_2__c",
-            "dataType": "string",
-            "sourceColumn": "Transition_Discount_Rate_Manual_2__c"
-          },
-          {
-            "name": "CL_Discount_End_Date__c",
-            "dataType": "dateTime",
-            "sourceColumn": "CL_Discount_End_Date__c"
-          },
-          {
-            "name": "Transition_Offer_End_Date_Manual__c",
-            "dataType": "dateTime",
-            "sourceColumn": "Transition_Offer_End_Date_Manual__c"
-          },
-          {
-            "name": "Transition_Offer_End_Date_Manual_2__c",
-            "dataType": "dateTime",
-            "sourceColumn": "Transition_Offer_End_Date_Manual_2__c"
-          },
-          {
-            "name": "CL_Transition_Rate__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Transition_Rate__c"
-          },
-          {
-            "name": "CL_Type_of_Audit__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Type_of_Audit__c"
-          },
-          {
-            "name": "CL_Volume_Discounting__c",
-            "dataType": "string",
-            "sourceColumn": "CL_Volume_Discounting__c"
-          },
-          {
-            "name": "Website",
-            "dataType": "string",
-            "sourceColumn": "Website"
-          },
-          {
-            "name": "customerage",
-            "dataType": "int64",
-            "sourceColumn": "customerage",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "sk_customer",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_customer"
-          },
-          {
-            "name": "nk_customer",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_customer"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "recordtypedesc",
-            "dataType": "string",
-            "sourceColumn": "recordtypedesc"
-          },
-          {
-            "name": "Implementation_IC__c",
-            "dataType": "string",
-            "sourceColumn": "Implementation_IC__c"
-          },
-          {
-            "name": "AdministratorSize",
-            "dataType": "string",
-            "sourceColumn": "AdministratorSize"
-          },
-          {
-            "name": "ic_FirstName",
-            "dataType": "string",
-            "sourceColumn": "ic_FirstName"
-          },
-          {
-            "name": "ic_LastName",
-            "dataType": "string",
-            "sourceColumn": "ic_LastName"
-          },
-          {
-            "name": "ic_Name",
-            "dataType": "string",
-            "sourceColumn": "ic_Name"
-          },
-          {
-            "name": "ic_Alias",
-            "dataType": "string",
-            "sourceColumn": "ic_Alias"
-          },
-          {
-            "name": "ic_Email",
-            "dataType": "string",
-            "sourceColumn": "ic_Email"
-          },
-          {
-            "name": "ic_Username",
-            "dataType": "string",
-            "sourceColumn": "ic_Username"
-          },
-          {
-            "name": "bc_FirstName",
-            "dataType": "string",
-            "sourceColumn": "bc_FirstName"
-          },
-          {
-            "name": "bc_LastName",
-            "dataType": "string",
-            "sourceColumn": "bc_LastName"
-          },
-          {
-            "name": "bc_Name",
-            "dataType": "string",
-            "sourceColumn": "bc_Name"
-          },
-          {
-            "name": "bc_Email",
-            "dataType": "string",
-            "sourceColumn": "bc_Email"
-          },
-          {
-            "name": "bc_leadsource",
-            "dataType": "string",
-            "sourceColumn": "bc_leadsource"
-          },
-          {
-            "name": "owner_FirstName",
-            "dataType": "string",
-            "sourceColumn": "owner_FirstName"
-          },
-          {
-            "name": "owner_LastName",
-            "dataType": "string",
-            "sourceColumn": "owner_LastName"
-          },
-          {
-            "name": "owner_Name",
-            "dataType": "string",
-            "sourceColumn": "owner_Name"
-          },
-          {
-            "name": "owner_Alias",
-            "dataType": "string",
-            "sourceColumn": "owner_Alias"
-          },
-          {
-            "name": "owner_Email",
-            "dataType": "string",
-            "sourceColumn": "owner_Email"
-          },
-          {
-            "name": "owner_Username",
-            "dataType": "string",
-            "sourceColumn": "owner_Username"
-          },
-          {
-            "name": "LiveDate",
-            "dataType": "dateTime",
-            "sourceColumn": "LiveDate"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_customer = Source{[Schema=\"c\",Item=\"customer\"]}[Data]",
-                "in",
-                "    c_customer"
-              ]
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Customer - Count",
-            "expression": "calculate(DISTINCTCOUNT([Id]),'c customer'[Id]<>BLANK())",
-            "formatString": "0"
-          }
-        ]
-      },
-      {
         "name": "Opportunity",
+        "isHidden": true,
         "columns": [
           {
             "name": "Id",
@@ -982,6 +454,7 @@
       },
       {
         "name": "c implementationconsultant",
+        "isHidden": true,
         "columns": [
           {
             "name": "nk_implementationconsultant",
@@ -1824,11 +1297,6 @@
             "sourceColumn": "HoldingAc - FeedCandidate"
           },
           {
-            "name": "HoldingAc - Count Unlinked",
-            "dataType": "int64",
-            "sourceColumn": "HoldingAc - Count Unlinked"
-          },
-          {
             "name": "FeedAc - isFeedAccount",
             "dataType": "string",
             "sourceColumn": "FeedAc - isFeedAccount"
@@ -1871,11 +1339,6 @@
             "expression": "DATE(left('Fund Information'[FeedAc - LastProcessed],4),MID('Fund Information'[FeedAc - LastProcessed],6,2),MID('Fund Information'[FeedAc - LastProcessed],9,2))"
           },
           {
-            "name": "Fund - Live Account",
-            "dataType": "string",
-            "sourceColumn": "Fund - Live Accounts"
-          },
-          {
             "type": "calculated",
             "name": "ZZ - Live Account",
             "dataType": "boolean",
@@ -1903,15 +1366,6 @@
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
           },
           {
-            "type": "calculated",
-            "name": "ZZ - Fund Live Accounts",
-            "dataType": "boolean",
-            "isDataTypeInferred": false,
-            "isHidden": true,
-            "expression": "'Fund Information'[Fund - Live Account]",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
-          },
-          {
             "name": "FeedState - Actor",
             "dataType": "string",
             "sourceColumn": "feedstate_feed_state_actor"
@@ -1921,8 +1375,31 @@
             "name": "ZZ - isFeedAccount",
             "dataType": "boolean",
             "isDataTypeInferred": false,
+            "isHidden": true,
             "expression": "'Fund Information'[FeedAc - isFeedAccount]",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+          },
+          {
+            "name": "HoldingAc - Unlinked",
+            "dataType": "string",
+            "sourceColumn": "HoldingAc - Unlinked"
+          },
+          {
+            "name": "FeedAc - Unlinked Account",
+            "dataType": "string",
+            "sourceColumn": "FeedAc - Unlinked Account"
+          },
+          {
+            "name": "fnk_propertyaddress",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_propertyaddress"
+          },
+          {
+            "name": "fsk_propertyaddres",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_propertyaddres"
           }
         ],
         "partitions": [
@@ -1972,7 +1449,7 @@
           },
           {
             "name": "FeedAc - Accounts",
-            "expression": "calculate(DISTINCTCOUNT([FeedAc - ID]),'Fund Information'[ZZ - isFeedAccount]=TRUE)"
+            "expression": "calculate(DISTINCTCOUNT([FeedAc - Unlinked Account]),'Fund Information'[ZZ - isFeedAccount]=TRUE)"
           },
           {
             "name": "FeedAc - Live Accounts",
@@ -1988,7 +1465,2562 @@
           },
           {
             "name": "Fund - Live Accounts",
-            "expression": "calculate(DISTINCTCOUNT([Fund - ID]),'Fund Information'[ZZ - Fund Live Accounts]=TRUE)"
+            "expression": "calculate([Fund - Live Portfolios]+[Fund - Live Funds])"
+          }
+        ]
+      },
+      {
+        "name": "Customers",
+        "columns": [
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id"
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name"
+          },
+          {
+            "name": "abn_acn",
+            "dataType": "string",
+            "sourceColumn": "abn_acn"
+          },
+          {
+            "name": "ownerid",
+            "dataType": "string",
+            "sourceColumn": "ownerid"
+          },
+          {
+            "name": "recordtype",
+            "dataType": "string",
+            "sourceColumn": "recordtype"
+          },
+          {
+            "name": "billingaddress",
+            "dataType": "string",
+            "sourceColumn": "billingaddress"
+          },
+          {
+            "name": "billingcontact",
+            "dataType": "string",
+            "sourceColumn": "billingcontact"
+          },
+          {
+            "name": "billingend",
+            "dataType": "dateTime",
+            "sourceColumn": "billingend"
+          },
+          {
+            "name": "billingname",
+            "dataType": "string",
+            "sourceColumn": "billingname"
+          },
+          {
+            "name": "billingstartdate",
+            "dataType": "dateTime",
+            "sourceColumn": "billingstartdate"
+          },
+          {
+            "name": "businesstype",
+            "dataType": "string",
+            "sourceColumn": "businesstype"
+          },
+          {
+            "name": "businesstype2",
+            "dataType": "string",
+            "sourceColumn": "businesstype2"
+          },
+          {
+            "name": "Cap_Stage_1_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Cap_Stage_1_End_Date__c"
+          },
+          {
+            "name": "CL_Billing_Cap__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Billing_Cap__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cap_Stage_2_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Cap_Stage_2_End_Date__c"
+          },
+          {
+            "name": "Cap_Stage_2_Units__c",
+            "dataType": "double",
+            "sourceColumn": "Cap_Stage_2_Units__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_Class_Business_Code__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Class_Business_Code__c"
+          },
+          {
+            "name": "CL_Contract_Type__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Contract_Type__c"
+          },
+          {
+            "name": "CL_Contracted_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Contracted_Date__c"
+          },
+          {
+            "name": "CL_Countplus_Firm__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Countplus_Firm__c"
+          },
+          {
+            "name": "CL_Data_Use_Restrictions__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Data_Use_Restrictions__c"
+          },
+          {
+            "name": "CL_Date_Termination_Requested__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Date_Termination_Requested__c"
+          },
+          {
+            "name": "NumberOfEmployees",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfEmployees",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FundSuspensionLastFollowUp__c",
+            "dataType": "dateTime",
+            "sourceColumn": "FundSuspensionLastFollowUp__c"
+          },
+          {
+            "name": "CL_Lite_Funds__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Lite_Funds__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_Lite_p_a_Discount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Lite_p_a_Discount__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_Member_Of__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Member_Of__c"
+          },
+          {
+            "name": "CL_Class_Admin_Partners__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Class_Admin_Partners__c"
+          },
+          {
+            "name": "ParentId",
+            "dataType": "string",
+            "sourceColumn": "ParentId"
+          },
+          {
+            "name": "CL_Partner_Agreement__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Partner_Agreement__c"
+          },
+          {
+            "name": "CL_Portfolio_Contract__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Portfolio_Contract__c"
+          },
+          {
+            "name": "CL_Portfolio_Discounting__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Portfolio_Discounting__c"
+          },
+          {
+            "name": "CL_Portfolio_per_month_rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Portfolio_per_month_rate__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_Portfolio_Rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Portfolio_Rate__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_Practice_Management_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Practice_Management_Platform__c"
+          },
+          {
+            "name": "CL_Pre_Class_Portfolio_System__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Pre_Class_Portfolio_System__c"
+          },
+          {
+            "name": "CL_Pre_Class_SMSF_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Pre_Class_SMSF_Platform__c"
+          },
+          {
+            "name": "Pricing_model__c",
+            "dataType": "string",
+            "sourceColumn": "Pricing_model__c"
+          },
+          {
+            "name": "CL_Referred_to_Admin__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Referred_to_Admin__c"
+          },
+          {
+            "name": "CL_Sales_Territory__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Sales_Territory__c"
+          },
+          {
+            "name": "CL_SMSF_p_a_Rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_p_a_Rate__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_SMSF_per_month_rate__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_per_month_rate__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_SMSF_Required_Before_Lite__c",
+            "dataType": "double",
+            "sourceColumn": "CL_SMSF_Required_Before_Lite__c",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CL_SMSF_Volume_Discount__c",
+            "dataType": "string",
+            "sourceColumn": "CL_SMSF_Volume_Discount__c"
+          },
+          {
+            "name": "SSA_Discount_Tier__c",
+            "dataType": "string",
+            "sourceColumn": "SSA_Discount_Tier__c"
+          },
+          {
+            "name": "CL_Stage_1_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_1_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_1_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_1_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_1_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_1_Start_Date__c"
+          },
+          {
+            "name": "CL_Stage_2_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_2_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_2_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_2_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_2_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_2_Start_Date__c"
+          },
+          {
+            "name": "CL_Stage_3_Minimum_Amount__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_3_Minimum_Amount__c"
+          },
+          {
+            "name": "CL_Stage_3_Minimum_Number__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Stage_3_Minimum_Number__c"
+          },
+          {
+            "name": "CL_Stage_3_Start_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Stage_3_Start_Date__c"
+          },
+          {
+            "name": "CL_Is_Standard_Contract__c",
+            "dataType": "boolean",
+            "sourceColumn": "CL_Is_Standard_Contract__c"
+          },
+          {
+            "name": "CL_Status__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Status__c"
+          },
+          {
+            "name": "CL_Tax_Platform__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Tax_Platform__c"
+          },
+          {
+            "name": "CL_TO_Billing_Email_List__c",
+            "dataType": "string",
+            "sourceColumn": "CL_TO_Billing_Email_List__c"
+          },
+          {
+            "name": "CL_Total_No_of_Portfolio__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Total_No_of_Portfolio__c"
+          },
+          {
+            "name": "CL_Total_No_of_SMSF__c",
+            "dataType": "double",
+            "sourceColumn": "CL_Total_No_of_SMSF__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Auto__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Auto__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Manual_1__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Manual_1__c"
+          },
+          {
+            "name": "Transition_Discount_Rate_Manual_2__c",
+            "dataType": "string",
+            "sourceColumn": "Transition_Discount_Rate_Manual_2__c"
+          },
+          {
+            "name": "CL_Discount_End_Date__c",
+            "dataType": "dateTime",
+            "sourceColumn": "CL_Discount_End_Date__c"
+          },
+          {
+            "name": "Transition_Offer_End_Date_Manual__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Transition_Offer_End_Date_Manual__c"
+          },
+          {
+            "name": "Transition_Offer_End_Date_Manual_2__c",
+            "dataType": "dateTime",
+            "sourceColumn": "Transition_Offer_End_Date_Manual_2__c"
+          },
+          {
+            "name": "CL_Transition_Rate__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Transition_Rate__c"
+          },
+          {
+            "name": "CL_Type_of_Audit__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Type_of_Audit__c"
+          },
+          {
+            "name": "CL_Volume_Discounting__c",
+            "dataType": "string",
+            "sourceColumn": "CL_Volume_Discounting__c"
+          },
+          {
+            "name": "Website",
+            "dataType": "string",
+            "sourceColumn": "Website"
+          },
+          {
+            "name": "customerage",
+            "dataType": "int64",
+            "sourceColumn": "customerage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_customer"
+          },
+          {
+            "name": "nk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_customer"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "recordtypedesc",
+            "dataType": "string",
+            "sourceColumn": "recordtypedesc"
+          },
+          {
+            "name": "Implementation_IC__c",
+            "dataType": "string",
+            "sourceColumn": "Implementation_IC__c"
+          },
+          {
+            "name": "AdministratorSize",
+            "dataType": "string",
+            "sourceColumn": "AdministratorSize"
+          },
+          {
+            "name": "ic_FirstName",
+            "dataType": "string",
+            "sourceColumn": "ic_FirstName"
+          },
+          {
+            "name": "ic_LastName",
+            "dataType": "string",
+            "sourceColumn": "ic_LastName"
+          },
+          {
+            "name": "ic_Name",
+            "dataType": "string",
+            "sourceColumn": "ic_Name"
+          },
+          {
+            "name": "ic_Alias",
+            "dataType": "string",
+            "sourceColumn": "ic_Alias"
+          },
+          {
+            "name": "ic_Email",
+            "dataType": "string",
+            "sourceColumn": "ic_Email"
+          },
+          {
+            "name": "ic_Username",
+            "dataType": "string",
+            "sourceColumn": "ic_Username"
+          },
+          {
+            "name": "bc_FirstName",
+            "dataType": "string",
+            "sourceColumn": "bc_FirstName"
+          },
+          {
+            "name": "bc_LastName",
+            "dataType": "string",
+            "sourceColumn": "bc_LastName"
+          },
+          {
+            "name": "bc_Name",
+            "dataType": "string",
+            "sourceColumn": "bc_Name"
+          },
+          {
+            "name": "bc_Email",
+            "dataType": "string",
+            "sourceColumn": "bc_Email"
+          },
+          {
+            "name": "bc_leadsource",
+            "dataType": "string",
+            "sourceColumn": "bc_leadsource"
+          },
+          {
+            "name": "owner_FirstName",
+            "dataType": "string",
+            "sourceColumn": "owner_FirstName"
+          },
+          {
+            "name": "owner_LastName",
+            "dataType": "string",
+            "sourceColumn": "owner_LastName"
+          },
+          {
+            "name": "owner_Name",
+            "dataType": "string",
+            "sourceColumn": "owner_Name"
+          },
+          {
+            "name": "owner_Alias",
+            "dataType": "string",
+            "sourceColumn": "owner_Alias"
+          },
+          {
+            "name": "owner_Email",
+            "dataType": "string",
+            "sourceColumn": "owner_Email"
+          },
+          {
+            "name": "owner_Username",
+            "dataType": "string",
+            "sourceColumn": "owner_Username"
+          },
+          {
+            "name": "LiveDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LiveDate"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_customer = Source{[Schema=\"c\",Item=\"customer\"]}[Data]",
+                "in",
+                "    c_customer"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Customer - Count",
+            "expression": "calculate(DISTINCTCOUNT([Id]),'Customers'[Id]<>BLANK())",
+            "formatString": "0"
+          }
+        ]
+      },
+      {
+        "name": "Transactions",
+        "columns": [
+          {
+            "name": "sk_transactionrule",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_transactionrule"
+          },
+          {
+            "name": "nk_transactionrule",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_transactionrule"
+          },
+          {
+            "name": "fsk_feedholdingaccount",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_feedholdingaccount"
+          },
+          {
+            "name": "fnk_feedholdingaccount",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_feedholdingaccount"
+          },
+          {
+            "name": "fsk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_fund"
+          },
+          {
+            "name": "fnk_fund",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_fund"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_business"
+          },
+          {
+            "name": "fsk_brand",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_brand"
+          },
+          {
+            "name": "fnk_brand",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_brand"
+          },
+          {
+            "name": "fsk_eventtype",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_eventtype"
+          },
+          {
+            "name": "fnk_eventtype",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_eventtype"
+          },
+          {
+            "name": "searchdescription",
+            "dataType": "string",
+            "sourceColumn": "searchdescription"
+          },
+          {
+            "name": "searchamount",
+            "dataType": "double",
+            "sourceColumn": "searchamount"
+          },
+          {
+            "name": "priority",
+            "dataType": "int64",
+            "sourceColumn": "priority"
+          },
+          {
+            "name": "autogst",
+            "dataType": "boolean",
+            "sourceColumn": "autogst"
+          },
+          {
+            "name": "effectivestatuscode",
+            "dataType": "int64",
+            "sourceColumn": "effectivestatuscode"
+          },
+          {
+            "name": "effectivestatusdatetime",
+            "dataType": "dateTime",
+            "sourceColumn": "effectivestatusdatetime"
+          },
+          {
+            "name": "direction",
+            "dataType": "int64",
+            "sourceColumn": "direction"
+          },
+          {
+            "name": "bankaccount",
+            "dataType": "string",
+            "sourceColumn": "bankaccount"
+          },
+          {
+            "name": "bulkprocessing",
+            "dataType": "boolean",
+            "sourceColumn": "bulkprocessing"
+          },
+          {
+            "name": "income",
+            "dataType": "string",
+            "sourceColumn": "income"
+          },
+          {
+            "name": "interest",
+            "dataType": "string",
+            "sourceColumn": "interest"
+          },
+          {
+            "name": "debit_credit",
+            "dataType": "string",
+            "sourceColumn": "debit_credit"
+          },
+          {
+            "name": "fee_not_bank_fee",
+            "dataType": "string",
+            "sourceColumn": "fee_not_bank_fee"
+          },
+          {
+            "name": "bank_fee",
+            "dataType": "string",
+            "sourceColumn": "bank_fee"
+          },
+          {
+            "name": "bank_fee_no_narrative",
+            "dataType": "string",
+            "sourceColumn": "bank_fee_no_narrative"
+          },
+          {
+            "name": "wildcards",
+            "dataType": "string",
+            "sourceColumn": "wildcards"
+          },
+          {
+            "name": "numeric_only",
+            "dataType": "string",
+            "sourceColumn": "numeric_only"
+          },
+          {
+            "name": "credit",
+            "dataType": "string",
+            "sourceColumn": "credit"
+          },
+          {
+            "name": "debit",
+            "dataType": "string",
+            "sourceColumn": "debit"
+          },
+          {
+            "name": "cheque",
+            "dataType": "string",
+            "sourceColumn": "cheque"
+          },
+          {
+            "name": "deposits",
+            "dataType": "string",
+            "sourceColumn": "deposits"
+          },
+          {
+            "name": "minor_3",
+            "dataType": "string",
+            "sourceColumn": "minor_3"
+          },
+          {
+            "name": "minor_6",
+            "dataType": "string",
+            "sourceColumn": "minor_6"
+          },
+          {
+            "name": "duplicates",
+            "dataType": "string",
+            "sourceColumn": "duplicates"
+          },
+          {
+            "name": "review_status",
+            "dataType": "string",
+            "sourceColumn": "review_status"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "status"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_transactionrules = Source{[Schema=\"c\",Item=\"transactionrules\"]}[Data]",
+                "in",
+                "    c_transactionrules"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Property Address",
+        "columns": [
+          {
+            "name": "sk_propertyaddress",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_propertyaddress"
+          },
+          {
+            "name": "nk_propertyaddress",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_propertyaddress"
+          },
+          {
+            "name": "effectivestatuscode",
+            "dataType": "int64",
+            "sourceColumn": "effectivestatuscode"
+          },
+          {
+            "name": "effectivestatusdatetime",
+            "dataType": "dateTime",
+            "sourceColumn": "effectivestatusdatetime"
+          },
+          {
+            "name": "address",
+            "dataType": "string",
+            "sourceColumn": "address"
+          },
+          {
+            "name": "locality",
+            "dataType": "string",
+            "sourceColumn": "locality"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "sourceColumn": "state"
+          },
+          {
+            "name": "postcode",
+            "dataType": "string",
+            "sourceColumn": "postcode"
+          },
+          {
+            "name": "countryid",
+            "dataType": "string",
+            "sourceColumn": "countryid"
+          },
+          {
+            "name": "lotidentifier",
+            "dataType": "string",
+            "sourceColumn": "lotidentifier"
+          },
+          {
+            "name": "manuallyverified",
+            "dataType": "boolean",
+            "sourceColumn": "manuallyverified"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_propertyaddress = Source{[Schema=\"c\",Item=\"propertyaddress\"]}[Data]",
+                "in",
+                "    c_propertyaddress"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lodgement Details",
+        "columns": [
+          {
+            "name": "sk_taxdetails",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "sourceColumn": "sk_taxdetails"
+          },
+          {
+            "name": "nk_taxdetails",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_taxdetails"
+          },
+          {
+            "name": "fsk_lodgement",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_lodgement"
+          },
+          {
+            "name": "fnk_lodgement",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_lodgement"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_business"
+          },
+          {
+            "name": "fsk_brand",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_brand"
+          },
+          {
+            "name": "fnk_brand",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_brand"
+          },
+          {
+            "name": "fsk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_fund"
+          },
+          {
+            "name": "fnk_fund",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_fund"
+          },
+          {
+            "name": "YearOfReturn",
+            "dataType": "int64",
+            "sourceColumn": "YearOfReturn"
+          },
+          {
+            "name": "IsThisAnAmendment",
+            "dataType": "boolean",
+            "sourceColumn": "IsThisAnAmendment"
+          },
+          {
+            "name": "Amendment",
+            "dataType": "string",
+            "sourceColumn": "Amendment"
+          },
+          {
+            "name": "ReasonForAmendment",
+            "dataType": "string",
+            "sourceColumn": "ReasonForAmendment"
+          },
+          {
+            "name": "WhichProfessionalBodyDoesTheAuditorBelongTo",
+            "dataType": "int64",
+            "sourceColumn": "WhichProfessionalBodyDoesTheAuditorBelongTo"
+          },
+          {
+            "name": "AuditorsProfessionalBodyMembershipNumber",
+            "dataType": "string",
+            "sourceColumn": "AuditorsProfessionalBodyMembershipNumber"
+          },
+          {
+            "name": "DateAuditWasCompleted",
+            "dataType": "string",
+            "sourceColumn": "DateAuditWasCompleted"
+          },
+          {
+            "name": "DateAuditWasCompletedSpecified",
+            "dataType": "string",
+            "sourceColumn": "DateAuditWasCompletedSpecified"
+          },
+          {
+            "name": "WasPartBOfTheAuditReportQualified",
+            "dataType": "boolean",
+            "sourceColumn": "WasPartBOfTheAuditReportQualified"
+          },
+          {
+            "name": "AuditReportWasQualifiedHaveIssuesBeenRectified",
+            "dataType": "string",
+            "sourceColumn": "AuditReportWasQualifiedHaveIssuesBeenRectified"
+          },
+          {
+            "name": "SuperStreamAlias",
+            "dataType": "string",
+            "sourceColumn": "SuperStreamAlias"
+          },
+          {
+            "name": "DifferentTaxRefundEftDetails",
+            "dataType": "boolean",
+            "sourceColumn": "DifferentTaxRefundEftDetails"
+          },
+          {
+            "name": "WasTheFundWoundUpDuringTheYear",
+            "dataType": "boolean",
+            "sourceColumn": "WasTheFundWoundUpDuringTheYear"
+          },
+          {
+            "name": "DateWoundUpSpecified",
+            "dataType": "string",
+            "sourceColumn": "DateWoundUpSpecified"
+          },
+          {
+            "name": "IfWoundUpHaveAllTaxLodgmentAndPaymentObligationsBeenMetSpecified",
+            "dataType": "string",
+            "sourceColumn": "IfWoundUpHaveAllTaxLodgmentAndPaymentObligationsBeenMetSpecified"
+          },
+          {
+            "name": "DidFundPayAnIncomeStreamToMembers",
+            "dataType": "boolean",
+            "sourceColumn": "DidFundPayAnIncomeStreamToMembers"
+          },
+          {
+            "name": "DidFundPayAnIncomeStreamToMembersSpecified",
+            "dataType": "boolean",
+            "sourceColumn": "DidFundPayAnIncomeStreamToMembersSpecified"
+          },
+          {
+            "name": "ExemptCurrentPensionIncomeAmountSpecified",
+            "dataType": "boolean",
+            "sourceColumn": "ExemptCurrentPensionIncomeAmountSpecified"
+          },
+          {
+            "name": "WhichMethodDidYouUseToCalculateExemption",
+            "dataType": "boolean",
+            "sourceColumn": "WhichMethodDidYouUseToCalculateExemption"
+          },
+          {
+            "name": "TotalAssessableIncome",
+            "dataType": "double",
+            "sourceColumn": "TotalAssessableIncome"
+          },
+          {
+            "name": "TotalAssessableIncomeLessExemptCurrentPensionIncome",
+            "dataType": "double",
+            "sourceColumn": "TotalAssessableIncomeLessExemptCurrentPensionIncome"
+          },
+          {
+            "name": "TotalDeductions",
+            "dataType": "double",
+            "sourceColumn": "TotalDeductions"
+          },
+          {
+            "name": "TotalNonDeductibleExpenses",
+            "dataType": "double",
+            "sourceColumn": "TotalNonDeductibleExpenses"
+          },
+          {
+            "name": "TaxableIncomeloss",
+            "dataType": "double",
+            "sourceColumn": "TaxableIncomeloss"
+          },
+          {
+            "name": "TotalSmsfExpenses",
+            "dataType": "double",
+            "sourceColumn": "TotalSmsfExpenses"
+          },
+          {
+            "name": "TaxableIncome",
+            "dataType": "double",
+            "sourceColumn": "TaxableIncome"
+          },
+          {
+            "name": "GrossTax",
+            "dataType": "double",
+            "sourceColumn": "GrossTax"
+          },
+          {
+            "name": "TaxPayable",
+            "dataType": "double",
+            "sourceColumn": "TaxPayable"
+          },
+          {
+            "name": "RebatesOffsetsForeignCredits",
+            "dataType": "double",
+            "sourceColumn": "RebatesOffsetsForeignCredits"
+          },
+          {
+            "name": "RefundableTaxOffsets",
+            "dataType": "double",
+            "sourceColumn": "RefundableTaxOffsets"
+          },
+          {
+            "name": "EligibleCredits",
+            "dataType": "double",
+            "sourceColumn": "EligibleCredits"
+          },
+          {
+            "name": "PAYGInstalmentsRaised",
+            "dataType": "double",
+            "sourceColumn": "PAYGInstalmentsRaised"
+          },
+          {
+            "name": "SupervisoryLevy",
+            "dataType": "double",
+            "sourceColumn": "SupervisoryLevy"
+          },
+          {
+            "name": "TotalAmountOfTaxPayableOrRefundable",
+            "dataType": "double",
+            "sourceColumn": "TotalAmountOfTaxPayableOrRefundable"
+          },
+          {
+            "name": "TaxLossesCarriedForwardToLaterIncomeYears",
+            "dataType": "double",
+            "sourceColumn": "TaxLossesCarriedForwardToLaterIncomeYears"
+          },
+          {
+            "name": "TotalAustralianAndOverseasAssets",
+            "dataType": "double",
+            "sourceColumn": "TotalAustralianAndOverseasAssets"
+          },
+          {
+            "name": "Borrowings",
+            "dataType": "double",
+            "sourceColumn": "Borrowings"
+          },
+          {
+            "name": "TotalMemberClosingAccountBalances",
+            "dataType": "double",
+            "sourceColumn": "TotalMemberClosingAccountBalances"
+          },
+          {
+            "name": "TotalLiabilities",
+            "dataType": "double",
+            "sourceColumn": "TotalLiabilities"
+          },
+          {
+            "name": "TaxAgentFamilyName",
+            "dataType": "string",
+            "sourceColumn": "TaxAgentFamilyName"
+          },
+          {
+            "name": "TaxAgentFirstGivenName",
+            "dataType": "string",
+            "sourceColumn": "TaxAgentFirstGivenName"
+          },
+          {
+            "name": "TaxAgentContactName",
+            "dataType": "string",
+            "sourceColumn": "TaxAgentContactName"
+          },
+          {
+            "name": "TaxAgentsPractice",
+            "dataType": "string",
+            "sourceColumn": "TaxAgentsPractice"
+          },
+          {
+            "name": "TaxAgentNumber",
+            "dataType": "string",
+            "sourceColumn": "TaxAgentNumber"
+          },
+          {
+            "name": "AuditorFamilyName",
+            "dataType": "string",
+            "sourceColumn": "AuditorFamilyName"
+          },
+          {
+            "name": "AuditorFirstName",
+            "dataType": "string",
+            "sourceColumn": "AuditorFirstName"
+          },
+          {
+            "name": "AuditorRegistrationNumber",
+            "dataType": "string",
+            "sourceColumn": "AuditorRegistrationNumber"
+          },
+          {
+            "name": "WasActuarialCertificateObtained",
+            "dataType": "boolean",
+            "sourceColumn": "WasActuarialCertificateObtained"
+          },
+          {
+            "name": "ExemptCurrentPensionIncomeSpecified",
+            "dataType": "boolean",
+            "sourceColumn": "ExemptCurrentPensionIncomeSpecified"
+          },
+          {
+            "name": "FinancialYear",
+            "dataType": "string",
+            "sourceColumn": "FinancialYear"
+          },
+          {
+            "name": "submitteddate",
+            "dataType": "dateTime",
+            "sourceColumn": "submitteddate"
+          },
+          {
+            "name": "transmissionSuccessful",
+            "dataType": "int64",
+            "sourceColumn": "transmissionSuccessful"
+          },
+          {
+            "name": "Accepted",
+            "dataType": "int64",
+            "sourceColumn": "Accepted"
+          },
+          {
+            "name": "Rejected",
+            "dataType": "int64",
+            "sourceColumn": "Rejected"
+          },
+          {
+            "name": "approvalnumber",
+            "dataType": "string",
+            "sourceColumn": "approvalnumber"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_lodgementDetails = Source{[Schema=\"c\",Item=\"lodgementDetails\"]}[Data]",
+                "in",
+                "    c_lodgementDetails"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "columns": [
+          {
+            "name": "sk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_users"
+          },
+          {
+            "name": "nk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_users"
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email"
+          },
+          {
+            "name": "source",
+            "dataType": "string",
+            "sourceColumn": "source"
+          },
+          {
+            "name": "isClassUser",
+            "dataType": "string",
+            "sourceColumn": "isClassUser"
+          },
+          {
+            "name": "isClassMemberUser",
+            "dataType": "string",
+            "sourceColumn": "isClassMemberUser"
+          },
+          {
+            "name": "isSMSFUser",
+            "dataType": "string",
+            "sourceColumn": "isSMSFUser"
+          },
+          {
+            "name": "fnk_userprofile",
+            "dataType": "string",
+            "sourceColumn": "fnk_userprofile"
+          },
+          {
+            "name": "userProfileStatus",
+            "dataType": "int64",
+            "sourceColumn": "userProfileStatus"
+          },
+          {
+            "name": "creationdate",
+            "dataType": "dateTime",
+            "sourceColumn": "creationdate"
+          },
+          {
+            "name": "applicationname",
+            "dataType": "string",
+            "sourceColumn": "applicationname"
+          },
+          {
+            "name": "lastlogindate",
+            "dataType": "dateTime",
+            "sourceColumn": "lastlogindate"
+          },
+          {
+            "name": "isapproved",
+            "dataType": "boolean",
+            "sourceColumn": "isapproved"
+          },
+          {
+            "name": "islockedout",
+            "dataType": "boolean",
+            "sourceColumn": "islockedout"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "status"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_users = Source{[Schema=\"c\",Item=\"users\"]}[Data]",
+                "in",
+                "    c_users"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "c usersbusiness",
+        "isHidden": true,
+        "columns": [
+          {
+            "name": "sk_usersbusiness",
+            "dataType": "int64",
+            "sourceColumn": "sk_usersbusiness"
+          },
+          {
+            "name": "nk_usersbusiness",
+            "dataType": "string",
+            "sourceColumn": "nk_usersbusiness"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "sourceColumn": "fnk_business"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_usersbusiness = Source{[Schema=\"c\",Item=\"usersbusiness\"]}[Data]",
+                "in",
+                "    c_usersbusiness"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Users Roles",
+        "columns": [
+          {
+            "name": "sk_usersroles",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_usersroles"
+          },
+          {
+            "name": "nk_usersroles",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_usersroles"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "rolename",
+            "dataType": "string",
+            "sourceColumn": "rolename"
+          },
+          {
+            "name": "applicationname",
+            "dataType": "string",
+            "sourceColumn": "applicationname"
+          },
+          {
+            "name": "userid",
+            "dataType": "string",
+            "sourceColumn": "userid"
+          },
+          {
+            "name": "invitationstatus",
+            "dataType": "string",
+            "sourceColumn": "invitationstatus"
+          },
+          {
+            "name": "WritePermissions",
+            "dataType": "int64",
+            "sourceColumn": "WritePermissions"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_usersroles = Source{[Schema=\"c\",Item=\"usersroles\"]}[Data]",
+                "in",
+                "    c_usersroles"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Brand",
+        "columns": [
+          {
+            "name": "sk_brand",
+            "dataType": "int64",
+            "sourceColumn": "sk_brand"
+          },
+          {
+            "name": "nk_brand",
+            "dataType": "string",
+            "sourceColumn": "nk_brand"
+          },
+          {
+            "name": "guid",
+            "dataType": "string",
+            "sourceColumn": "guid"
+          },
+          {
+            "name": "code",
+            "dataType": "string",
+            "sourceColumn": "code"
+          },
+          {
+            "name": "description",
+            "dataType": "string",
+            "sourceColumn": "description"
+          },
+          {
+            "name": "effectivestatuscode",
+            "dataType": "int64",
+            "sourceColumn": "effectivestatuscode"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "sourceColumn": "fnk_business"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "effectivestatusdatetime",
+            "dataType": "dateTime",
+            "sourceColumn": "effectivestatusdatetime"
+          },
+          {
+            "name": "effectivestatus",
+            "dataType": "string",
+            "sourceColumn": "effectivestatus"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_brand = Source{[Schema=\"c\",Item=\"brand\"]}[Data]",
+                "in",
+                "    c_brand"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Business",
+        "columns": [
+          {
+            "name": "sk_business",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_business"
+          },
+          {
+            "name": "nk_business",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_business"
+          },
+          {
+            "name": "guid",
+            "dataType": "string",
+            "sourceColumn": "guid"
+          },
+          {
+            "name": "code",
+            "dataType": "string",
+            "sourceColumn": "code"
+          },
+          {
+            "name": "description",
+            "dataType": "string",
+            "sourceColumn": "description"
+          },
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "fnk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_customer"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "effectivestatuscode",
+            "dataType": "int64",
+            "sourceColumn": "effectivestatuscode"
+          },
+          {
+            "name": "effectivestatusdatetime",
+            "dataType": "dateTime",
+            "sourceColumn": "effectivestatusdatetime"
+          },
+          {
+            "name": "effectivestatus",
+            "dataType": "string",
+            "sourceColumn": "effectivestatus"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_business = Source{[Schema=\"c\",Item=\"business\"]}[Data]",
+                "in",
+                "    c_business"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Funds",
+        "columns": [
+          {
+            "name": "GUID",
+            "dataType": "string",
+            "sourceColumn": "GUID"
+          },
+          {
+            "name": "Code",
+            "dataType": "string",
+            "sourceColumn": "Code"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status"
+          },
+          {
+            "name": "IsDemo",
+            "dataType": "boolean",
+            "sourceColumn": "IsDemo"
+          },
+          {
+            "name": "StartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "StartDate"
+          },
+          {
+            "name": "OnClassDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OnClassDate"
+          },
+          {
+            "name": "ABN",
+            "dataType": "string",
+            "sourceColumn": "ABN"
+          },
+          {
+            "name": "FirstActivatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstActivatedDate"
+          },
+          {
+            "name": "FirstActivatedBy",
+            "dataType": "string",
+            "sourceColumn": "FirstActivatedBy"
+          },
+          {
+            "name": "LastActivatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastActivatedDate"
+          },
+          {
+            "name": "LastActivatedBy",
+            "dataType": "string",
+            "sourceColumn": "LastActivatedBy"
+          },
+          {
+            "name": "SuspendedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "SuspendedDate"
+          },
+          {
+            "name": "SuspendedBy",
+            "dataType": "string",
+            "sourceColumn": "SuspendedBy"
+          },
+          {
+            "name": "CancelledDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CancelledDate"
+          },
+          {
+            "name": "CancelledBy",
+            "dataType": "string",
+            "sourceColumn": "CancelledBy"
+          },
+          {
+            "name": "fsk_brand",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_brand"
+          },
+          {
+            "name": "fnk_brand",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_brand"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_business"
+          },
+          {
+            "name": "fsk_fundtype",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_fundtype"
+          },
+          {
+            "name": "fnk_fundtype",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_fundtype"
+          },
+          {
+            "name": "sk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "sourceColumn": "sk_fund"
+          },
+          {
+            "name": "nk_fund",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_fund"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_fund = Source{[Schema=\"c\",Item=\"fund\"]}[Data]",
+                "in",
+                "    c_fund"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Assessment",
+        "columns": [
+          {
+            "name": "sk_assessment",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_assessment"
+          },
+          {
+            "name": "nk_assessment",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_assessment"
+          },
+          {
+            "name": "fsk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_courses"
+          },
+          {
+            "name": "fnk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "id",
+            "dataType": "string",
+            "sourceColumn": "id"
+          },
+          {
+            "name": "assessment_name",
+            "dataType": "string",
+            "sourceColumn": "assessment_name"
+          },
+          {
+            "name": "assessment_post_name",
+            "dataType": "string",
+            "sourceColumn": "assessment_post_name"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_assessment = Source{[Schema=\"c\",Item=\"assessment\"]}[Data]",
+                "in",
+                "    c_assessment"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Assessment Statistics",
+        "columns": [
+          {
+            "name": "sk_assessmentstats",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_assessmentstats"
+          },
+          {
+            "name": "nk_assessmentstats",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_assessmentstats"
+          },
+          {
+            "name": "fsk_assessment",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_assessment"
+          },
+          {
+            "name": "fnk_assessment",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_assessment"
+          },
+          {
+            "name": "fsk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_courses"
+          },
+          {
+            "name": "fnk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "score",
+            "dataType": "double",
+            "sourceColumn": "score"
+          },
+          {
+            "name": "points",
+            "dataType": "double",
+            "sourceColumn": "points"
+          },
+          {
+            "name": "total_points",
+            "dataType": "double",
+            "sourceColumn": "total_points"
+          },
+          {
+            "name": "percentage",
+            "dataType": "double",
+            "sourceColumn": "percentage"
+          },
+          {
+            "name": "timespent",
+            "dataType": "double",
+            "sourceColumn": "timespent"
+          },
+          {
+            "name": "pass",
+            "dataType": "double",
+            "sourceColumn": "pass"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_assessmentstats = Source{[Schema=\"c\",Item=\"assessmentstats\"]}[Data]",
+                "in",
+                "    c_assessmentstats"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Courses",
+        "columns": [
+          {
+            "name": "sk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_courses"
+          },
+          {
+            "name": "nk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_courses"
+          },
+          {
+            "name": "id",
+            "dataType": "string",
+            "sourceColumn": "id"
+          },
+          {
+            "name": "course_name",
+            "dataType": "string",
+            "sourceColumn": "course_name"
+          },
+          {
+            "name": "course_post_name",
+            "dataType": "string",
+            "sourceColumn": "course_post_name"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_courses = Source{[Schema=\"c\",Item=\"courses\"]}[Data]",
+                "in",
+                "    c_courses"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Course Statistics",
+        "columns": [
+          {
+            "name": "sk_coursestats",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_coursestats"
+          },
+          {
+            "name": "nk_coursestats",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_coursestats"
+          },
+          {
+            "name": "fsk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_courses"
+          },
+          {
+            "name": "fnk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "steps_total",
+            "dataType": "double",
+            "sourceColumn": "steps_total"
+          },
+          {
+            "name": "steps_completed",
+            "dataType": "double",
+            "sourceColumn": "steps_completed"
+          },
+          {
+            "name": "steps_last_id",
+            "dataType": "double",
+            "sourceColumn": "steps_last_id"
+          },
+          {
+            "name": "course_completed",
+            "dataType": "string",
+            "sourceColumn": "course_completed"
+          },
+          {
+            "name": "course_completed_on",
+            "dataType": "dateTime",
+            "sourceColumn": "course_completed_on"
+          },
+          {
+            "name": "course_started_on",
+            "dataType": "dateTime",
+            "sourceColumn": "course_started_on"
+          },
+          {
+            "name": "course_total_time_on",
+            "dataType": "int64",
+            "sourceColumn": "course_total_time_on"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_coursestats = Source{[Schema=\"c\",Item=\"coursestats\"]}[Data]",
+                "in",
+                "    c_coursestats"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fundamentals",
+        "columns": [
+          {
+            "name": "sk_fundamentals",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_fundamentals"
+          },
+          {
+            "name": "nk_fundamentals",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_fundamentals"
+          },
+          {
+            "name": "fsk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_courses"
+          },
+          {
+            "name": "fnk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "fsk_lessons",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_lessons"
+          },
+          {
+            "name": "fnk_lessons",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_lessons"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "module",
+            "dataType": "string",
+            "sourceColumn": "module"
+          },
+          {
+            "name": "module_name",
+            "dataType": "string",
+            "sourceColumn": "module_name"
+          },
+          {
+            "name": "target_name",
+            "dataType": "string",
+            "sourceColumn": "target_name"
+          },
+          {
+            "name": "action",
+            "dataType": "string",
+            "sourceColumn": "action"
+          },
+          {
+            "name": "result",
+            "dataType": "int64",
+            "sourceColumn": "result"
+          },
+          {
+            "name": "completion",
+            "dataType": "int64",
+            "sourceColumn": "completion"
+          },
+          {
+            "name": "timestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "timestamp"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_fundamentals = Source{[Schema=\"c\",Item=\"fundamentals\"]}[Data]",
+                "in",
+                "    c_fundamentals"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lessons",
+        "columns": [
+          {
+            "name": "sk_lessons",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_lessons"
+          },
+          {
+            "name": "nk_lessons",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_lessons"
+          },
+          {
+            "name": "fsk_courses",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_courses"
+          },
+          {
+            "name": "fnk_courses",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "id",
+            "dataType": "string",
+            "sourceColumn": "id"
+          },
+          {
+            "name": "lesson_name",
+            "dataType": "string",
+            "sourceColumn": "lesson_name"
+          },
+          {
+            "name": "lesson_post_name",
+            "dataType": "string",
+            "sourceColumn": "lesson_post_name"
+          },
+          {
+            "name": "d_start",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_start"
+          },
+          {
+            "name": "d_end",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "d_end"
+          },
+          {
+            "name": "d_current",
+            "dataType": "boolean",
+            "isHidden": true,
+            "sourceColumn": "d_current"
+          },
+          {
+            "name": "load_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "load_date"
+          },
+          {
+            "name": "row_hash",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "row_hash"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_lessons = Source{[Schema=\"c\",Item=\"lessons\"]}[Data]",
+                "in",
+                "    c_lessons"
+              ]
+            }
           }
         ]
       }
@@ -1998,21 +4030,21 @@
         "name": "3f2f92a4-2687-4a5c-8cdb-29a03a4c5a9c",
         "fromTable": "Opportunity",
         "fromColumn": "fsk_customer",
-        "toTable": "c customer",
+        "toTable": "Customers",
         "toColumn": "sk_customer"
       },
       {
         "name": "66a4b61a-7ad5-4416-b6de-75c7e60b479c",
         "fromTable": "Fund Information",
         "fromColumn": "fsk_customer",
-        "toTable": "c customer",
+        "toTable": "Customers",
         "toColumn": "sk_customer"
       },
       {
         "name": "694e3369-9e90-4df9-817f-1c6398761f5b",
         "fromTable": "c implementationconsultant",
         "fromColumn": "fsk_customer",
-        "toTable": "c customer",
+        "toTable": "Customers",
         "toColumn": "sk_customer"
       },
       {
@@ -2022,6 +4054,121 @@
         "toTable": "Feed Balance",
         "toColumn": "fsk_feedholdingaccount",
         "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "ebd940ab-9f50-4302-9e52-e259fb4fcd36",
+        "fromTable": "Fund Information",
+        "fromColumn": "fsk_propertyaddres",
+        "toTable": "Property Address",
+        "toColumn": "sk_propertyaddress",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "b87b2c27-dbb8-4810-93a5-16c4a6a28825",
+        "fromTable": "Users Roles",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "abb85eb9-0e7b-4775-a5e7-565a2dd037f7",
+        "fromTable": "c usersbusiness",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "b1271140-c0a0-4fc6-ae1d-9d3b1d2f00e5",
+        "fromTable": "Brand",
+        "fromColumn": "fsk_business",
+        "toTable": "Business",
+        "toColumn": "sk_business"
+      },
+      {
+        "name": "b055b169-9e79-4489-84c9-7b123e6ec810",
+        "fromTable": "Funds",
+        "fromColumn": "fsk_brand",
+        "toTable": "Brand",
+        "toColumn": "sk_brand"
+      },
+      {
+        "name": "46333db5-67b5-44ca-8c85-75ab89f99fab",
+        "fromTable": "c usersbusiness",
+        "fromColumn": "fsk_business",
+        "toTable": "Business",
+        "toColumn": "sk_business"
+      },
+      {
+        "name": "af3d7b52-2a6f-43a2-a67d-d9f6af360a47",
+        "fromTable": "Transactions",
+        "fromColumn": "fsk_fund",
+        "toTable": "Funds",
+        "toColumn": "sk_fund",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "4a067b3f-7335-4688-9f81-bd475e33e799",
+        "fromTable": "Lodgement Details",
+        "fromColumn": "fsk_fund",
+        "toTable": "Funds",
+        "toColumn": "sk_fund",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "ae3c6a0d-fb21-40ec-afbc-91eb97f08a36",
+        "fromTable": "Course Statistics",
+        "fromColumn": "fsk_courses",
+        "toTable": "Courses",
+        "toColumn": "sk_courses"
+      },
+      {
+        "name": "e02e7c28-7f68-42ea-b7e2-94c4c3563141",
+        "fromTable": "Course Statistics",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "32fa30d6-f5e6-4ee9-9d8d-1781a4188494",
+        "fromTable": "Assessment Statistics",
+        "fromColumn": "fsk_assessment",
+        "toTable": "Assessment",
+        "toColumn": "sk_assessment"
+      },
+      {
+        "name": "6824b306-71b1-4f31-8e69-a5f2a2c9202a",
+        "fromTable": "Assessment Statistics",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "2892a711-1c96-4b75-baf8-144a9d7733e6",
+        "fromTable": "Assessment Statistics",
+        "fromColumn": "fsk_courses",
+        "toTable": "Courses",
+        "toColumn": "sk_courses"
+      },
+      {
+        "name": "147039bc-bdb3-40ab-8c3b-6c6ec6c7b24f",
+        "fromTable": "Fundamentals",
+        "fromColumn": "fsk_courses",
+        "toTable": "Courses",
+        "toColumn": "sk_courses"
+      },
+      {
+        "name": "ad0894fe-8335-4cb2-9c37-264918e3d835",
+        "fromTable": "Fundamentals",
+        "fromColumn": "fsk_lessons",
+        "toTable": "Lessons",
+        "toColumn": "sk_lessons"
+      },
+      {
+        "name": "ff247c88-50f8-45bf-af95-0ed444a00b21",
+        "fromTable": "Fundamentals",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
       }
     ],
     "roles": [
