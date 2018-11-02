@@ -18,8 +18,6 @@
         },
         "credential": {
           "AuthenticationKind": "ServiceAccount",
-          "kind": "SQL",
-          "path": "172.30.16.20;coms_bi",
           "EncryptConnection": false
         }
       }
@@ -27,7 +25,6 @@
     "tables": [
       {
         "name": "Opportunity",
-        "isHidden": true,
         "columns": [
           {
             "name": "Id",
@@ -1230,7 +1227,7 @@
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": [
-              "if('Fund Information'[FeedAc - Status] = \"Active\",",
+              "if('Fund Information'[FeedAc - Status] = \"Active\" & ISBLANK('Fund Information'[FeedAc - Status Date]) = FALSE,",
               "\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=3,",
               "\t\t\"A. <3 mths\",",
               "\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) <=6,",
@@ -1241,7 +1238,7 @@
               "\t\t\t\t\t\"D. 9-12 mths\",",
               "\t\t\t\t\tif(DATEDIFF('Fund Information'[FeedAc - Status Date],TODAY(),MONTH) >12,",
               "\t\t\t\t\t\t\"E. >12 mths\",\"Z. No Data\"))))),",
-              "\tBLANK())"
+              "\tBLANK()) "
             ]
           },
           {
@@ -1400,6 +1397,31 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "fsk_propertyaddres"
+          },
+          {
+            "name": "HoldingAccount - isProperty",
+            "dataType": "string",
+            "sourceColumn": "isProperty"
+          },
+          {
+            "name": "HoldingAccount - isResidential",
+            "dataType": "string",
+            "sourceColumn": "isResidential"
+          },
+          {
+            "name": "HoldingAccount - isCommercial",
+            "dataType": "string",
+            "sourceColumn": "isCommercial"
+          },
+          {
+            "name": "HoldingAccount - isPropertyWithNoDepreciation",
+            "dataType": "string",
+            "sourceColumn": "isPropertyWithNoDepreciation"
+          },
+          {
+            "name": "FeedAc - isNotManuallyImported",
+            "dataType": "string",
+            "sourceColumn": "FeedAc - isNotManuallyImported"
           }
         ],
         "partitions": [
@@ -1972,6 +1994,56 @@
             "name": "LiveDate",
             "dataType": "dateTime",
             "sourceColumn": "LiveDate"
+          },
+          {
+            "name": "Account_IC__c",
+            "dataType": "string",
+            "sourceColumn": "Account_IC__c"
+          },
+          {
+            "name": "AccountExpectedSize__c",
+            "dataType": "string",
+            "sourceColumn": "AccountExpectedSize__c"
+          },
+          {
+            "name": "IC_Expected_SMSF_Account__c",
+            "dataType": "double",
+            "sourceColumn": "IC_Expected_SMSF_Account__c"
+          },
+          {
+            "name": "IC_Expected_Portfolio_Account__c",
+            "dataType": "double",
+            "sourceColumn": "IC_Expected_Portfolio_Account__c"
+          },
+          {
+            "name": "a_ic_FirstName",
+            "dataType": "string",
+            "sourceColumn": "a_ic_FirstName"
+          },
+          {
+            "name": "a_ic_LastName",
+            "dataType": "string",
+            "sourceColumn": "a_ic_LastName"
+          },
+          {
+            "name": "a_ic_Name",
+            "dataType": "string",
+            "sourceColumn": "a_ic_Name"
+          },
+          {
+            "name": "a_ic_Alias",
+            "dataType": "string",
+            "sourceColumn": "a_ic_Alias"
+          },
+          {
+            "name": "a_ic_Email",
+            "dataType": "string",
+            "sourceColumn": "a_ic_Email"
+          },
+          {
+            "name": "a_ic_Username",
+            "dataType": "string",
+            "sourceColumn": "a_ic_Username"
           }
         ],
         "partitions": [
@@ -1993,7 +2065,7 @@
         "measures": [
           {
             "name": "Customer - Count",
-            "expression": "calculate(DISTINCTCOUNT([Id]),'Customers'[Id]<>BLANK())",
+            "expression": "calculate(DISTINCTCOUNT(Customers[nk_customer]),Customers[nk_customer]<>BLANK())",
             "formatString": "0"
           }
         ]
@@ -2062,177 +2134,170 @@
             "sourceColumn": "fnk_brand"
           },
           {
-            "name": "fsk_eventtype",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_eventtype"
-          },
-          {
-            "name": "fnk_eventtype",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_eventtype"
-          },
-          {
-            "name": "searchdescription",
+            "name": "Transactions - Search Description",
             "dataType": "string",
             "sourceColumn": "searchdescription"
           },
           {
-            "name": "searchamount",
+            "name": "Transactions - Search Amount",
             "dataType": "double",
-            "sourceColumn": "searchamount"
+            "sourceColumn": "searchamount",
+            "summarizeBy": "none"
           },
           {
-            "name": "priority",
+            "name": "Transactions - Priority",
             "dataType": "int64",
-            "sourceColumn": "priority"
+            "sourceColumn": "priority",
+            "summarizeBy": "none"
           },
           {
-            "name": "autogst",
+            "name": "Transactions - Auto GST",
             "dataType": "boolean",
             "sourceColumn": "autogst"
           },
           {
-            "name": "effectivestatuscode",
+            "name": "Transactions - Status Code",
             "dataType": "int64",
-            "sourceColumn": "effectivestatuscode"
+            "sourceColumn": "effectivestatuscode",
+            "summarizeBy": "none"
           },
           {
-            "name": "effectivestatusdatetime",
+            "name": "Transactions - Status Date",
             "dataType": "dateTime",
             "sourceColumn": "effectivestatusdatetime"
           },
           {
-            "name": "direction",
+            "name": "Transactions - Direction",
             "dataType": "int64",
-            "sourceColumn": "direction"
+            "sourceColumn": "direction",
+            "summarizeBy": "none"
           },
           {
-            "name": "bankaccount",
+            "name": "Transactions - Bank Account",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "bankaccount"
           },
           {
-            "name": "bulkprocessing",
+            "name": "Transactions - Bulk Processing",
             "dataType": "boolean",
             "sourceColumn": "bulkprocessing"
           },
           {
-            "name": "income",
+            "name": "Transactions - Income",
             "dataType": "string",
             "sourceColumn": "income"
           },
           {
-            "name": "interest",
+            "name": "Transactions - Interest",
             "dataType": "string",
             "sourceColumn": "interest"
           },
           {
-            "name": "debit_credit",
+            "name": "Transactions - Debit/Credit",
             "dataType": "string",
             "sourceColumn": "debit_credit"
           },
           {
-            "name": "fee_not_bank_fee",
+            "name": "Transactions - Fee (Not Bank Fee)",
             "dataType": "string",
             "sourceColumn": "fee_not_bank_fee"
           },
           {
-            "name": "bank_fee",
+            "name": "Transactions - Bank Fee",
             "dataType": "string",
             "sourceColumn": "bank_fee"
           },
           {
-            "name": "bank_fee_no_narrative",
+            "name": "Transactions - Bank Fee (No Narrative)",
             "dataType": "string",
             "sourceColumn": "bank_fee_no_narrative"
           },
           {
-            "name": "wildcards",
+            "name": "Transactions - Wildcards",
             "dataType": "string",
             "sourceColumn": "wildcards"
           },
           {
-            "name": "numeric_only",
+            "name": "Transactions - isNumericOnly",
             "dataType": "string",
             "sourceColumn": "numeric_only"
           },
           {
-            "name": "credit",
+            "name": "Transactions - Credit",
             "dataType": "string",
             "sourceColumn": "credit"
           },
           {
-            "name": "debit",
+            "name": "Transactions - Debit",
             "dataType": "string",
             "sourceColumn": "debit"
           },
           {
-            "name": "cheque",
+            "name": "Transactions - Cheque",
             "dataType": "string",
             "sourceColumn": "cheque"
           },
           {
-            "name": "deposits",
+            "name": "Transactions - Deposits",
             "dataType": "string",
             "sourceColumn": "deposits"
           },
           {
-            "name": "minor_3",
+            "name": "Transactions - <=3",
             "dataType": "string",
             "sourceColumn": "minor_3"
           },
           {
-            "name": "minor_6",
+            "name": "Transactions - <=6",
             "dataType": "string",
             "sourceColumn": "minor_6"
           },
           {
-            "name": "duplicates",
+            "name": "Transactions - Duplicates",
             "dataType": "string",
             "sourceColumn": "duplicates"
           },
           {
-            "name": "review_status",
+            "name": "Transactions - Review Status",
             "dataType": "string",
             "sourceColumn": "review_status"
           },
           {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          },
-          {
-            "name": "status",
+            "name": "Transactions - Status",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "status"
+          },
+          {
+            "name": "searchadditionalinfo",
+            "dataType": "string",
+            "sourceColumn": "searchadditionalinfo"
+          },
+          {
+            "name": "Transactions - Classification",
+            "dataType": "string",
+            "sourceColumn": "event_name"
+          },
+          {
+            "name": "Transactions - hasHoldingAccount",
+            "dataType": "string",
+            "sourceColumn": "hasHoldingAccount"
+          },
+          {
+            "name": "Transactions - hasBankAccount",
+            "dataType": "string",
+            "sourceColumn": "hasBankAccount"
+          },
+          {
+            "name": "Transactions - HoldingAccountName",
+            "dataType": "string",
+            "sourceColumn": "HoldingAccountName"
+          },
+          {
+            "name": "Transactions - HoldingAccountID",
+            "dataType": "string",
+            "sourceColumn": "HoldingAccountID"
           }
         ],
         "partitions": [
@@ -2250,6 +2315,12 @@
               ]
             }
           }
+        ],
+        "measures": [
+          {
+            "name": "Transactions -Count",
+            "expression": "calculate(DISTINCTCOUNT(Transactions[nk_transactionrule]),Transactions[nk_transactionrule]<>BLANK())"
+          }
         ]
       },
       {
@@ -2262,38 +2333,13 @@
             "sourceColumn": "sk_propertyaddress"
           },
           {
-            "name": "nk_propertyaddress",
+            "name": "PropertyAddress - ID",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "nk_propertyaddress"
           },
           {
-            "name": "effectivestatuscode",
-            "dataType": "int64",
-            "sourceColumn": "effectivestatuscode"
-          },
-          {
-            "name": "effectivestatusdatetime",
-            "dataType": "dateTime",
-            "sourceColumn": "effectivestatusdatetime"
-          },
-          {
-            "name": "address",
-            "dataType": "string",
-            "sourceColumn": "address"
-          },
-          {
-            "name": "locality",
-            "dataType": "string",
-            "sourceColumn": "locality"
-          },
-          {
-            "name": "state",
-            "dataType": "string",
-            "sourceColumn": "state"
-          },
-          {
-            "name": "postcode",
+            "name": "PropertyAddress - PostCode",
             "dataType": "string",
             "sourceColumn": "postcode"
           },
@@ -2303,14 +2349,9 @@
             "sourceColumn": "countryid"
           },
           {
-            "name": "lotidentifier",
+            "name": "PropertyAddress - LotIdentifier",
             "dataType": "string",
             "sourceColumn": "lotidentifier"
-          },
-          {
-            "name": "manuallyverified",
-            "dataType": "boolean",
-            "sourceColumn": "manuallyverified"
           },
           {
             "name": "d_start",
@@ -2343,7 +2384,37 @@
             "sourceColumn": "load_date"
           },
           {
-            "name": "status",
+            "name": "PropertyAddress - StatusCode",
+            "dataType": "int64",
+            "sourceColumn": "effectivestatuscode"
+          },
+          {
+            "name": "PropertyAddress - StatusDate",
+            "dataType": "dateTime",
+            "sourceColumn": "effectivestatusdatetime"
+          },
+          {
+            "name": "PropertyAddress - Address",
+            "dataType": "string",
+            "sourceColumn": "address"
+          },
+          {
+            "name": "PropertyAddress - Locality",
+            "dataType": "string",
+            "sourceColumn": "locality"
+          },
+          {
+            "name": "PropertyAddress - State",
+            "dataType": "string",
+            "sourceColumn": "state"
+          },
+          {
+            "name": "PropertyAddress - ManuallyVerified",
+            "dataType": "boolean",
+            "sourceColumn": "manuallyverified"
+          },
+          {
+            "name": "PropertyAddress - Status",
             "dataType": "string",
             "sourceColumn": "status"
           }
@@ -2432,7 +2503,8 @@
           {
             "name": "YearOfReturn",
             "dataType": "int64",
-            "sourceColumn": "YearOfReturn"
+            "sourceColumn": "YearOfReturn",
+            "summarizeBy": "none"
           },
           {
             "name": "IsThisAnAmendment",
@@ -2493,11 +2565,6 @@
             "name": "WasTheFundWoundUpDuringTheYear",
             "dataType": "boolean",
             "sourceColumn": "WasTheFundWoundUpDuringTheYear"
-          },
-          {
-            "name": "DateWoundUpSpecified",
-            "dataType": "string",
-            "sourceColumn": "DateWoundUpSpecified"
           },
           {
             "name": "IfWoundUpHaveAllTaxLodgmentAndPaymentObligationsBeenMetSpecified",
@@ -2687,7 +2754,8 @@
           {
             "name": "transmissionSuccessful",
             "dataType": "int64",
-            "sourceColumn": "transmissionSuccessful"
+            "sourceColumn": "transmissionSuccessful",
+            "summarizeBy": "none"
           },
           {
             "name": "Accepted",
@@ -2703,6 +2771,11 @@
             "name": "approvalnumber",
             "dataType": "string",
             "sourceColumn": "approvalnumber"
+          },
+          {
+            "name": "DateWoundUp",
+            "dataType": "dateTime",
+            "sourceColumn": "DateWoundUp"
           }
         ],
         "partitions": [
@@ -2734,68 +2807,90 @@
           {
             "name": "nk_users",
             "dataType": "string",
-            "isHidden": true,
             "sourceColumn": "nk_users"
           },
           {
-            "name": "email",
+            "name": "User - Email",
             "dataType": "string",
             "sourceColumn": "email"
           },
           {
-            "name": "source",
+            "name": "User - Source Name",
             "dataType": "string",
             "sourceColumn": "source"
           },
           {
-            "name": "isClassUser",
+            "name": "User - isClassUser",
             "dataType": "string",
             "sourceColumn": "isClassUser"
           },
           {
-            "name": "isClassMemberUser",
+            "name": "User - isClassMemberUser",
             "dataType": "string",
             "sourceColumn": "isClassMemberUser"
           },
           {
-            "name": "isSMSFUser",
+            "name": "User - isSMSFUser",
             "dataType": "string",
             "sourceColumn": "isSMSFUser"
           },
           {
             "name": "fnk_userprofile",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "fnk_userprofile"
           },
           {
-            "name": "userProfileStatus",
+            "name": "User - userProfileStatus",
             "dataType": "int64",
-            "sourceColumn": "userProfileStatus"
+            "sourceColumn": "userProfileStatus",
+            "summarizeBy": "none"
           },
           {
-            "name": "creationdate",
+            "name": "User - Creation Date",
             "dataType": "dateTime",
             "sourceColumn": "creationdate"
           },
           {
-            "name": "applicationname",
+            "name": "User - Application Name",
             "dataType": "string",
             "sourceColumn": "applicationname"
           },
           {
-            "name": "lastlogindate",
+            "name": "User - Last Login Date",
             "dataType": "dateTime",
             "sourceColumn": "lastlogindate"
           },
           {
-            "name": "isapproved",
+            "name": "User - isApproved",
             "dataType": "boolean",
             "sourceColumn": "isapproved"
           },
           {
-            "name": "islockedout",
+            "name": "User - isLockedOut",
             "dataType": "boolean",
             "sourceColumn": "islockedout"
+          },
+          {
+            "name": "User - Status",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "status"
+          },
+          {
+            "name": "User - Last Name",
+            "dataType": "string",
+            "sourceColumn": "familyname"
+          },
+          {
+            "name": "User - First Name",
+            "dataType": "string",
+            "sourceColumn": "givenmane"
+          },
+          {
+            "name": "User - isLMSUser",
+            "dataType": "string",
+            "sourceColumn": "isLMSUser"
           },
           {
             "name": "d_start",
@@ -2826,12 +2921,6 @@
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "row_hash"
-          },
-          {
-            "name": "status",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "status"
           }
         ],
         "partitions": [
@@ -2848,6 +2937,12 @@
                 "    c_users"
               ]
             }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Users - Count",
+            "expression": "calculate(DISTINCTCOUNT(Users[nk_users]),Users[nk_users]<>BLANK())"
           }
         ]
       },
@@ -2956,59 +3051,31 @@
             "sourceColumn": "fnk_users"
           },
           {
-            "name": "rolename",
+            "name": "Roles - Name",
             "dataType": "string",
             "sourceColumn": "rolename"
           },
           {
-            "name": "applicationname",
+            "name": "Roles - Source Name",
             "dataType": "string",
             "sourceColumn": "applicationname"
           },
           {
             "name": "userid",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "userid"
           },
           {
-            "name": "invitationstatus",
+            "name": "Users - Invitation Status",
             "dataType": "string",
             "sourceColumn": "invitationstatus"
           },
           {
-            "name": "WritePermissions",
+            "name": "Roles - WritePermissions",
             "dataType": "int64",
-            "sourceColumn": "WritePermissions"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
+            "sourceColumn": "WritePermissions",
+            "summarizeBy": "none"
           }
         ],
         "partitions": [
@@ -3034,65 +3101,55 @@
           {
             "name": "sk_brand",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "sk_brand"
           },
           {
             "name": "nk_brand",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "nk_brand"
           },
           {
-            "name": "guid",
+            "name": "Brand - ID",
             "dataType": "string",
             "sourceColumn": "guid"
           },
           {
-            "name": "code",
+            "name": "Brand - Code",
             "dataType": "string",
             "sourceColumn": "code"
           },
           {
-            "name": "description",
+            "name": "Brand - Description",
             "dataType": "string",
             "sourceColumn": "description"
           },
           {
-            "name": "effectivestatuscode",
+            "name": "Brand - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "effectivestatuscode"
+            "sourceColumn": "effectivestatuscode",
+            "summarizeBy": "none"
           },
           {
             "name": "fsk_business",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "fsk_business"
           },
           {
             "name": "fnk_business",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "fnk_business"
           },
           {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "effectivestatusdatetime",
+            "name": "Brand - StatusDate",
             "dataType": "dateTime",
             "sourceColumn": "effectivestatusdatetime"
           },
           {
-            "name": "effectivestatus",
+            "name": "Brand - Status",
             "dataType": "string",
             "sourceColumn": "effectivestatus"
           }
@@ -3112,6 +3169,12 @@
               ]
             }
           }
+        ],
+        "measures": [
+          {
+            "name": "Distinct Count of Brand - ID",
+            "expression": "DISTINCTCOUNT([Brand - ID])"
+          }
         ]
       },
       {
@@ -3130,17 +3193,17 @@
             "sourceColumn": "nk_business"
           },
           {
-            "name": "guid",
+            "name": "Business - ID",
             "dataType": "string",
             "sourceColumn": "guid"
           },
           {
-            "name": "code",
+            "name": "Business - Code",
             "dataType": "string",
             "sourceColumn": "code"
           },
           {
-            "name": "description",
+            "name": "Business - Description",
             "dataType": "string",
             "sourceColumn": "description"
           },
@@ -3157,35 +3220,18 @@
             "sourceColumn": "fnk_customer"
           },
           {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "effectivestatuscode",
+            "name": "Business - StatusCode",
             "dataType": "int64",
-            "sourceColumn": "effectivestatuscode"
+            "sourceColumn": "effectivestatuscode",
+            "summarizeBy": "none"
           },
           {
-            "name": "effectivestatusdatetime",
+            "name": "Business - StatusDate",
             "dataType": "dateTime",
             "sourceColumn": "effectivestatusdatetime"
           },
           {
-            "name": "effectivestatus",
+            "name": "Business - Status",
             "dataType": "string",
             "sourceColumn": "effectivestatus"
           }
@@ -3205,88 +3251,94 @@
               ]
             }
           }
+        ],
+        "measures": [
+          {
+            "name": "Distinct Count of Business - ID",
+            "expression": "calculate(DISTINCTCOUNT(Brand[Brand - ID]),Brand[Brand - ID]<>BLANK())"
+          }
         ]
       },
       {
         "name": "Funds",
         "columns": [
           {
-            "name": "GUID",
+            "name": "Fund - ID",
             "dataType": "string",
             "sourceColumn": "GUID"
           },
           {
-            "name": "Code",
+            "name": "Fund - Code",
             "dataType": "string",
             "sourceColumn": "Code"
           },
           {
-            "name": "Name",
+            "name": "Fund - Name",
             "dataType": "string",
             "sourceColumn": "Name"
           },
           {
-            "name": "Status",
+            "name": "Fund - Status",
             "dataType": "string",
             "sourceColumn": "Status"
           },
           {
-            "name": "IsDemo",
+            "name": "Fund - isDemo",
             "dataType": "boolean",
             "sourceColumn": "IsDemo"
           },
           {
-            "name": "StartDate",
+            "name": "Fund - StartDate",
             "dataType": "dateTime",
             "sourceColumn": "StartDate"
           },
           {
-            "name": "OnClassDate",
+            "name": "Fund - OnClassDate",
             "dataType": "dateTime",
             "sourceColumn": "OnClassDate"
           },
           {
-            "name": "ABN",
+            "name": "Fund - ABN",
             "dataType": "string",
             "sourceColumn": "ABN"
           },
           {
-            "name": "FirstActivatedDate",
+            "name": "Fund - FirstActivatedDate",
             "dataType": "dateTime",
             "sourceColumn": "FirstActivatedDate"
           },
           {
-            "name": "FirstActivatedBy",
+            "name": "Fund - FirstActivatedBy",
             "dataType": "string",
             "sourceColumn": "FirstActivatedBy"
           },
           {
-            "name": "LastActivatedDate",
+            "name": "Fund - LastActivatedDate",
             "dataType": "dateTime",
             "sourceColumn": "LastActivatedDate"
           },
           {
-            "name": "LastActivatedBy",
+            "name": "Fund - LastActivatedBy",
             "dataType": "string",
             "sourceColumn": "LastActivatedBy"
           },
           {
-            "name": "SuspendedDate",
+            "name": "Fund - SuspendedDate",
             "dataType": "dateTime",
             "sourceColumn": "SuspendedDate"
           },
           {
-            "name": "SuspendedBy",
+            "name": "Fund - SuspendedBy",
             "dataType": "string",
             "sourceColumn": "SuspendedBy"
           },
           {
-            "name": "CancelledDate",
+            "name": "Fund - CancelledDate",
             "dataType": "dateTime",
             "sourceColumn": "CancelledDate"
           },
           {
-            "name": "CancelledBy",
+            "name": "Fund - CancelledBy",
             "dataType": "string",
             "sourceColumn": "CancelledBy"
           },
@@ -3362,6 +3414,91 @@
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "row_hash"
+          },
+          {
+            "name": "Fund - Live Fund",
+            "dataType": "string",
+            "sourceColumn": "Fund - Live Fund"
+          },
+          {
+            "name": "Fund - Live Portfolio",
+            "dataType": "string",
+            "sourceColumn": "Fund - Live Portfolio"
+          },
+          {
+            "name": "Fund - EndPeriodDate",
+            "dataType": "dateTime",
+            "sourceColumn": "endperioddate"
+          },
+          {
+            "name": "Fund - Period Process Yype",
+            "dataType": "string",
+            "sourceColumn": "fundperiodprocesstype"
+          },
+          {
+            "name": "Fund - Suspension7Days",
+            "dataType": "string",
+            "sourceColumn": "Suspension7Days"
+          },
+          {
+            "name": "Fund - Suspension30Days",
+            "dataType": "string",
+            "sourceColumn": "Suspension30Days"
+          },
+          {
+            "name": "Fund - Suspension3Months",
+            "dataType": "string",
+            "sourceColumn": "Suspension3Months"
+          },
+          {
+            "name": "Fund - Suspension12Months",
+            "dataType": "string",
+            "sourceColumn": "Suspension12Months"
+          },
+          {
+            "name": "Fund - Suspension12MonthsPlus",
+            "dataType": "string",
+            "sourceColumn": "Suspension12MonthsPlus"
+          },
+          {
+            "name": "Fund - Period Processing FY",
+            "dataType": "int64",
+            "sourceColumn": "Fund - Period Processing FY"
+          },
+          {
+            "name": "Fund - Lastest Lodged Year",
+            "dataType": "int64",
+            "sourceColumn": "Fund - Lastest Lodged Year"
+          },
+          {
+            "name": "Fund - Count CurrentYear Lodgement",
+            "dataType": "int64",
+            "sourceColumn": "Fund - Count CurrentYear Lodgement"
+          },
+          {
+            "name": "Fund - Count PrevYear Lodgement",
+            "dataType": "int64",
+            "sourceColumn": "Fund - Count PrevYear Lodgement"
+          },
+          {
+            "name": "Fund - EndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "enddate"
+          },
+          {
+            "name": "Fund - hasEndDate",
+            "dataType": "string",
+            "sourceColumn": "hasEndDate"
+          },
+          {
+            "name": "Fund - hasDateWoundUp",
+            "dataType": "string",
+            "sourceColumn": "hasDateWoundUp"
+          },
+          {
+            "name": "Fund - DateWoundUp",
+            "dataType": "dateTime",
+            "sourceColumn": "datewoundup"
           }
         ],
         "partitions": [
@@ -3379,424 +3516,11 @@
               ]
             }
           }
-        ]
-      },
-      {
-        "name": "Assessment",
-        "columns": [
-          {
-            "name": "sk_assessment",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_assessment"
-          },
-          {
-            "name": "nk_assessment",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_assessment"
-          },
-          {
-            "name": "fsk_courses",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_courses"
-          },
-          {
-            "name": "fnk_courses",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_courses"
-          },
-          {
-            "name": "id",
-            "dataType": "string",
-            "sourceColumn": "id"
-          },
-          {
-            "name": "assessment_name",
-            "dataType": "string",
-            "sourceColumn": "assessment_name"
-          },
-          {
-            "name": "assessment_post_name",
-            "dataType": "string",
-            "sourceColumn": "assessment_post_name"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          }
         ],
-        "partitions": [
+        "measures": [
           {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_assessment = Source{[Schema=\"c\",Item=\"assessment\"]}[Data]",
-                "in",
-                "    c_assessment"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "name": "Assessment Statistics",
-        "columns": [
-          {
-            "name": "sk_assessmentstats",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_assessmentstats"
-          },
-          {
-            "name": "nk_assessmentstats",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_assessmentstats"
-          },
-          {
-            "name": "fsk_assessment",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_assessment"
-          },
-          {
-            "name": "fnk_assessment",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_assessment"
-          },
-          {
-            "name": "fsk_courses",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_courses"
-          },
-          {
-            "name": "fnk_courses",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_courses"
-          },
-          {
-            "name": "fsk_users",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_users"
-          },
-          {
-            "name": "fnk_users",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_users"
-          },
-          {
-            "name": "score",
-            "dataType": "double",
-            "sourceColumn": "score"
-          },
-          {
-            "name": "points",
-            "dataType": "double",
-            "sourceColumn": "points"
-          },
-          {
-            "name": "total_points",
-            "dataType": "double",
-            "sourceColumn": "total_points"
-          },
-          {
-            "name": "percentage",
-            "dataType": "double",
-            "sourceColumn": "percentage"
-          },
-          {
-            "name": "timespent",
-            "dataType": "double",
-            "sourceColumn": "timespent"
-          },
-          {
-            "name": "pass",
-            "dataType": "double",
-            "sourceColumn": "pass"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_assessmentstats = Source{[Schema=\"c\",Item=\"assessmentstats\"]}[Data]",
-                "in",
-                "    c_assessmentstats"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "name": "Courses",
-        "columns": [
-          {
-            "name": "sk_courses",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_courses"
-          },
-          {
-            "name": "nk_courses",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_courses"
-          },
-          {
-            "name": "id",
-            "dataType": "string",
-            "sourceColumn": "id"
-          },
-          {
-            "name": "course_name",
-            "dataType": "string",
-            "sourceColumn": "course_name"
-          },
-          {
-            "name": "course_post_name",
-            "dataType": "string",
-            "sourceColumn": "course_post_name"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_courses = Source{[Schema=\"c\",Item=\"courses\"]}[Data]",
-                "in",
-                "    c_courses"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "name": "Course Statistics",
-        "columns": [
-          {
-            "name": "sk_coursestats",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_coursestats"
-          },
-          {
-            "name": "nk_coursestats",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_coursestats"
-          },
-          {
-            "name": "fsk_courses",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_courses"
-          },
-          {
-            "name": "fnk_courses",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_courses"
-          },
-          {
-            "name": "fsk_users",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_users"
-          },
-          {
-            "name": "fnk_users",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_users"
-          },
-          {
-            "name": "steps_total",
-            "dataType": "double",
-            "sourceColumn": "steps_total"
-          },
-          {
-            "name": "steps_completed",
-            "dataType": "double",
-            "sourceColumn": "steps_completed"
-          },
-          {
-            "name": "steps_last_id",
-            "dataType": "double",
-            "sourceColumn": "steps_last_id"
-          },
-          {
-            "name": "course_completed",
-            "dataType": "string",
-            "sourceColumn": "course_completed"
-          },
-          {
-            "name": "course_completed_on",
-            "dataType": "dateTime",
-            "sourceColumn": "course_completed_on"
-          },
-          {
-            "name": "course_started_on",
-            "dataType": "dateTime",
-            "sourceColumn": "course_started_on"
-          },
-          {
-            "name": "course_total_time_on",
-            "dataType": "int64",
-            "sourceColumn": "course_total_time_on"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_coursestats = Source{[Schema=\"c\",Item=\"coursestats\"]}[Data]",
-                "in",
-                "    c_coursestats"
-              ]
-            }
+            "name": "Funds - Count",
+            "expression": "calculate(DISTINCTCOUNT(Funds[Fund - ID]),Funds[Fund - ID]<>BLANK())"
           }
         ]
       },
@@ -3816,22 +3540,10 @@
             "sourceColumn": "nk_fundamentals"
           },
           {
-            "name": "fsk_courses",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_courses"
-          },
-          {
             "name": "fnk_courses",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "fnk_courses"
-          },
-          {
-            "name": "fsk_lessons",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_lessons"
           },
           {
             "name": "fnk_lessons",
@@ -3887,34 +3599,29 @@
             "sourceColumn": "timestamp"
           },
           {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
+            "name": "course_name",
             "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
+            "sourceColumn": "course_name"
+          },
+          {
+            "name": "course_post_name",
+            "dataType": "string",
+            "sourceColumn": "course_post_name"
+          },
+          {
+            "name": "course_module",
+            "dataType": "string",
+            "sourceColumn": "course_module"
+          },
+          {
+            "name": "lesson_name",
+            "dataType": "string",
+            "sourceColumn": "lesson_name"
+          },
+          {
+            "name": "lesson_post_name",
+            "dataType": "string",
+            "sourceColumn": "lesson_post_name"
           }
         ],
         "partitions": [
@@ -3935,76 +3642,82 @@
         ]
       },
       {
-        "name": "Lessons",
+        "name": "Report Package",
         "columns": [
           {
-            "name": "sk_lessons",
+            "name": "sk_report",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "sk_lessons"
+            "sourceColumn": "sk_report"
           },
           {
-            "name": "nk_lessons",
+            "name": "nk_report",
             "dataType": "string",
             "isHidden": true,
-            "sourceColumn": "nk_lessons"
+            "sourceColumn": "nk_report"
           },
           {
-            "name": "fsk_courses",
+            "name": "fsk_business",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "fsk_courses"
+            "sourceColumn": "fsk_business"
           },
           {
-            "name": "fnk_courses",
+            "name": "fnk_business",
             "dataType": "string",
             "isHidden": true,
-            "sourceColumn": "fnk_courses"
+            "sourceColumn": "fnk_business"
           },
           {
-            "name": "id",
+            "name": "fsk_brand",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_brand"
+          },
+          {
+            "name": "fnk_brand",
             "dataType": "string",
-            "sourceColumn": "id"
+            "isHidden": true,
+            "sourceColumn": "fnk_brand"
           },
           {
-            "name": "lesson_name",
+            "name": "fsk_fund",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_fund"
+          },
+          {
+            "name": "fnk_fund",
             "dataType": "string",
-            "sourceColumn": "lesson_name"
+            "isHidden": true,
+            "sourceColumn": "fnk_fund"
           },
           {
-            "name": "lesson_post_name",
+            "name": "fnk_users",
             "dataType": "string",
-            "sourceColumn": "lesson_post_name"
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
           },
           {
-            "name": "d_start",
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "packagename",
+            "dataType": "string",
+            "sourceColumn": "packagename"
+          },
+          {
+            "name": "effectivestatusdatetime",
             "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
+            "sourceColumn": "effectivestatusdatetime"
           },
           {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
+            "name": "userprofileid",
             "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
+            "sourceColumn": "userprofileid"
           }
         ],
         "partitions": [
@@ -4016,11 +3729,205 @@
               "expression": [
                 "let",
                 "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_lessons = Source{[Schema=\"c\",Item=\"lessons\"]}[Data]",
+                "    c_report = Source{[Schema=\"c\",Item=\"report\"]}[Data]",
                 "in",
-                "    c_lessons"
+                "    c_report"
               ]
             }
+          }
+        ]
+      },
+      {
+        "name": "Training",
+        "columns": [
+          {
+            "name": "Course - ID",
+            "dataType": "string",
+            "sourceColumn": "fnk_courses"
+          },
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "Assessment - ID",
+            "dataType": "string",
+            "sourceColumn": "fnk_assessment"
+          },
+          {
+            "name": "Course - Steps Total",
+            "dataType": "double",
+            "sourceColumn": "steps_total",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Course - Steps Completed",
+            "dataType": "double",
+            "sourceColumn": "steps_completed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Course - isCompleted",
+            "dataType": "string",
+            "sourceColumn": "course_completed"
+          },
+          {
+            "name": "Course - CompletedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "course_completed_on"
+          },
+          {
+            "name": "Course - StartedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "course_started_on"
+          },
+          {
+            "name": "Course - Total Time",
+            "dataType": "int64",
+            "sourceColumn": "course_total_time_on",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Course - name",
+            "dataType": "string",
+            "sourceColumn": "course_name"
+          },
+          {
+            "name": "Course - Post Name",
+            "dataType": "string",
+            "sourceColumn": "course_post_name"
+          },
+          {
+            "name": "Assessment - Score",
+            "dataType": "double",
+            "sourceColumn": "score",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Assessment - Points",
+            "dataType": "double",
+            "sourceColumn": "points",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Assessment -Total Points",
+            "dataType": "double",
+            "sourceColumn": "total_points",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Assessment - Percentage",
+            "dataType": "double",
+            "sourceColumn": "percentage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Assessment - Time Spent",
+            "dataType": "double",
+            "sourceColumn": "timespent",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pass",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "pass"
+          },
+          {
+            "name": "Assessment - Started Date",
+            "dataType": "dateTime",
+            "sourceColumn": "activity_started"
+          },
+          {
+            "name": "Assessment - Completed Date",
+            "dataType": "dateTime",
+            "sourceColumn": "activity_completed"
+          },
+          {
+            "name": "Assessment - Pass",
+            "dataType": "string",
+            "sourceColumn": "pass_text"
+          },
+          {
+            "name": "Assessment - Name",
+            "dataType": "string",
+            "sourceColumn": "assessment_name"
+          },
+          {
+            "name": "Assessment - Post Name",
+            "dataType": "string",
+            "sourceColumn": "assessment_post_name"
+          },
+          {
+            "name": "Course - Module Name",
+            "dataType": "string",
+            "sourceColumn": "module"
+          },
+          {
+            "name": "nk_coursestats",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_coursestats"
+          },
+          {
+            "name": "sk_coursestats",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_coursestats"
+          },
+          {
+            "name": "nk_assessmentstats",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_assessmentstats"
+          },
+          {
+            "name": "sk_assessmentstats",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_assessmentstats"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_training = Source{[Schema=\"c\",Item=\"training\"]}[Data]",
+                "in",
+                "    c_training"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Assessment - Count",
+            "expression": "calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[Assessment - ID]<>BLANK())"
+          },
+          {
+            "name": "Course - Count",
+            "expression": "calculate(DISTINCTCOUNT(Training[nk_coursestats]), Training[Course - ID]<>BLANK())"
+          },
+          {
+            "name": "Course - Count Completed",
+            "expression": " calculate(DISTINCTCOUNT(Training[nk_coursestats]),Training[Course - isCompleted] = \"Yes\")"
+          },
+          {
+            "name": "Assessment - Count Pass",
+            "expression": " calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[pass] = 1)"
           }
         ]
       }
@@ -4048,22 +3955,6 @@
         "toColumn": "sk_customer"
       },
       {
-        "name": "7928b408-5319-42ff-a8a9-fd44444be117",
-        "fromTable": "Fund Information",
-        "fromColumn": "sk_feedholdingaccount",
-        "toTable": "Feed Balance",
-        "toColumn": "fsk_feedholdingaccount",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
-        "name": "ebd940ab-9f50-4302-9e52-e259fb4fcd36",
-        "fromTable": "Fund Information",
-        "fromColumn": "fsk_propertyaddres",
-        "toTable": "Property Address",
-        "toColumn": "sk_propertyaddress",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
         "name": "b87b2c27-dbb8-4810-93a5-16c4a6a28825",
         "fromTable": "Users Roles",
         "fromColumn": "fsk_users",
@@ -4071,35 +3962,59 @@
         "toColumn": "sk_users"
       },
       {
-        "name": "abb85eb9-0e7b-4775-a5e7-565a2dd037f7",
-        "fromTable": "c usersbusiness",
+        "name": "ff247c88-50f8-45bf-af95-0ed444a00b21",
+        "fromTable": "Fundamentals",
         "fromColumn": "fsk_users",
         "toTable": "Users",
         "toColumn": "sk_users"
       },
       {
-        "name": "b1271140-c0a0-4fc6-ae1d-9d3b1d2f00e5",
-        "fromTable": "Brand",
-        "fromColumn": "fsk_business",
-        "toTable": "Business",
-        "toColumn": "sk_business"
-      },
-      {
-        "name": "b055b169-9e79-4489-84c9-7b123e6ec810",
+        "name": "79a2b266-810f-42ef-894c-37772bb590a8",
         "fromTable": "Funds",
         "fromColumn": "fsk_brand",
         "toTable": "Brand",
-        "toColumn": "sk_brand"
+        "toColumn": "sk_brand",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "46333db5-67b5-44ca-8c85-75ab89f99fab",
-        "fromTable": "c usersbusiness",
+        "name": "4d6011a0-128e-4d72-b8ac-119c29b782b1",
+        "fromTable": "Brand",
         "fromColumn": "fsk_business",
         "toTable": "Business",
-        "toColumn": "sk_business"
+        "toColumn": "sk_business",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "af3d7b52-2a6f-43a2-a67d-d9f6af360a47",
+        "name": "b78eb350-56b5-475b-bac3-233509cd75f5",
+        "fromTable": "Report Package",
+        "fromColumn": "fsk_fund",
+        "toTable": "Funds",
+        "toColumn": "sk_fund"
+      },
+      {
+        "name": "5529dda0-dc4f-4f57-8aa2-a6fe4a5c761b",
+        "fromTable": "Lodgement Details",
+        "fromColumn": "fsk_fund",
+        "toTable": "Funds",
+        "toColumn": "sk_fund"
+      },
+      {
+        "name": "8bfe9ae0-857b-48f7-ad46-426bf268dc76",
+        "fromTable": "Fund Information",
+        "fromColumn": "sk_feedholdingaccount",
+        "toTable": "Feed Balance",
+        "toColumn": "fsk_feedholdingaccount",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "b0d011b6-133b-47ec-8a87-6977a67cb0d7",
+        "fromTable": "Fund Information",
+        "fromColumn": "fsk_propertyaddres",
+        "toTable": "Property Address",
+        "toColumn": "sk_propertyaddress"
+      },
+      {
+        "name": "a3483039-d578-4ef3-9d4b-25db32f44db4",
         "fromTable": "Transactions",
         "fromColumn": "fsk_fund",
         "toTable": "Funds",
@@ -4107,68 +4022,35 @@
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "4a067b3f-7335-4688-9f81-bd475e33e799",
-        "fromTable": "Lodgement Details",
-        "fromColumn": "fsk_fund",
-        "toTable": "Funds",
-        "toColumn": "sk_fund",
+        "name": "6852795d-990b-4069-810f-e3ac57c1d71b",
+        "fromTable": "Training",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "897441f3-aa00-4e47-b4ef-3e2d509e8ef0",
+        "fromTable": "c usersbusiness",
+        "fromColumn": "fsk_users",
+        "toTable": "Users",
+        "toColumn": "sk_users",
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "ae3c6a0d-fb21-40ec-afbc-91eb97f08a36",
-        "fromTable": "Course Statistics",
-        "fromColumn": "fsk_courses",
-        "toTable": "Courses",
-        "toColumn": "sk_courses"
+        "name": "114750ea-f0b9-403a-ad6f-d8ce6d6344c1",
+        "fromTable": "c usersbusiness",
+        "fromColumn": "fsk_business",
+        "toTable": "Business",
+        "toColumn": "sk_business",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "e02e7c28-7f68-42ea-b7e2-94c4c3563141",
-        "fromTable": "Course Statistics",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
-      },
-      {
-        "name": "32fa30d6-f5e6-4ee9-9d8d-1781a4188494",
-        "fromTable": "Assessment Statistics",
-        "fromColumn": "fsk_assessment",
-        "toTable": "Assessment",
-        "toColumn": "sk_assessment"
-      },
-      {
-        "name": "6824b306-71b1-4f31-8e69-a5f2a2c9202a",
-        "fromTable": "Assessment Statistics",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
-      },
-      {
-        "name": "2892a711-1c96-4b75-baf8-144a9d7733e6",
-        "fromTable": "Assessment Statistics",
-        "fromColumn": "fsk_courses",
-        "toTable": "Courses",
-        "toColumn": "sk_courses"
-      },
-      {
-        "name": "147039bc-bdb3-40ab-8c3b-6c6ec6c7b24f",
-        "fromTable": "Fundamentals",
-        "fromColumn": "fsk_courses",
-        "toTable": "Courses",
-        "toColumn": "sk_courses"
-      },
-      {
-        "name": "ad0894fe-8335-4cb2-9c37-264918e3d835",
-        "fromTable": "Fundamentals",
-        "fromColumn": "fsk_lessons",
-        "toTable": "Lessons",
-        "toColumn": "sk_lessons"
-      },
-      {
-        "name": "ff247c88-50f8-45bf-af95-0ed444a00b21",
-        "fromTable": "Fundamentals",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
+        "name": "9b4bbe0f-9c48-4db0-98a3-a8c88101c881",
+        "fromTable": "Business",
+        "fromColumn": "fsk_customer",
+        "toTable": "Customers",
+        "toColumn": "sk_customer",
+        "crossFilteringBehavior": "bothDirections"
       }
     ],
     "roles": [
