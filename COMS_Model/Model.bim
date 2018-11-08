@@ -2796,307 +2796,8 @@
         ]
       },
       {
-        "name": "Users",
-        "columns": [
-          {
-            "name": "sk_users",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_users"
-          },
-          {
-            "name": "nk_users",
-            "dataType": "string",
-            "sourceColumn": "nk_users"
-          },
-          {
-            "name": "User - Email",
-            "dataType": "string",
-            "sourceColumn": "email"
-          },
-          {
-            "name": "User - Source Name",
-            "dataType": "string",
-            "sourceColumn": "source"
-          },
-          {
-            "name": "User - isClassUser",
-            "dataType": "string",
-            "sourceColumn": "isClassUser"
-          },
-          {
-            "name": "User - isClassMemberUser",
-            "dataType": "string",
-            "sourceColumn": "isClassMemberUser"
-          },
-          {
-            "name": "User - isSMSFUser",
-            "dataType": "string",
-            "sourceColumn": "isSMSFUser"
-          },
-          {
-            "name": "fnk_userprofile",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_userprofile"
-          },
-          {
-            "name": "User - userProfileStatus",
-            "dataType": "int64",
-            "sourceColumn": "userProfileStatus",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "User - Creation Date",
-            "dataType": "dateTime",
-            "sourceColumn": "creationdate"
-          },
-          {
-            "name": "User - Application Name",
-            "dataType": "string",
-            "sourceColumn": "applicationname"
-          },
-          {
-            "name": "User - Last Login Date",
-            "dataType": "dateTime",
-            "sourceColumn": "lastlogindate"
-          },
-          {
-            "name": "User - isApproved",
-            "dataType": "boolean",
-            "sourceColumn": "isapproved"
-          },
-          {
-            "name": "User - isLockedOut",
-            "dataType": "boolean",
-            "sourceColumn": "islockedout"
-          },
-          {
-            "name": "User - Status",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "status"
-          },
-          {
-            "name": "User - Last Name",
-            "dataType": "string",
-            "sourceColumn": "familyname"
-          },
-          {
-            "name": "User - First Name",
-            "dataType": "string",
-            "sourceColumn": "givenmane"
-          },
-          {
-            "name": "User - isLMSUser",
-            "dataType": "string",
-            "sourceColumn": "isLMSUser"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "isHidden": true,
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "row_hash"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_users = Source{[Schema=\"c\",Item=\"users\"]}[Data]",
-                "in",
-                "    c_users"
-              ]
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Users - Count",
-            "expression": "calculate(DISTINCTCOUNT(Users[nk_users]),Users[nk_users]<>BLANK())"
-          }
-        ]
-      },
-      {
-        "name": "c usersbusiness",
-        "isHidden": true,
-        "columns": [
-          {
-            "name": "sk_usersbusiness",
-            "dataType": "int64",
-            "sourceColumn": "sk_usersbusiness"
-          },
-          {
-            "name": "nk_usersbusiness",
-            "dataType": "string",
-            "sourceColumn": "nk_usersbusiness"
-          },
-          {
-            "name": "fsk_users",
-            "dataType": "int64",
-            "sourceColumn": "fsk_users"
-          },
-          {
-            "name": "fnk_users",
-            "dataType": "string",
-            "sourceColumn": "fnk_users"
-          },
-          {
-            "name": "fsk_business",
-            "dataType": "int64",
-            "sourceColumn": "fsk_business"
-          },
-          {
-            "name": "fnk_business",
-            "dataType": "string",
-            "sourceColumn": "fnk_business"
-          },
-          {
-            "name": "d_start",
-            "dataType": "dateTime",
-            "sourceColumn": "d_start"
-          },
-          {
-            "name": "d_end",
-            "dataType": "dateTime",
-            "sourceColumn": "d_end"
-          },
-          {
-            "name": "d_current",
-            "dataType": "boolean",
-            "sourceColumn": "d_current"
-          },
-          {
-            "name": "load_date",
-            "dataType": "dateTime",
-            "sourceColumn": "load_date"
-          },
-          {
-            "name": "row_hash",
-            "dataType": "string",
-            "sourceColumn": "row_hash"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_usersbusiness = Source{[Schema=\"c\",Item=\"usersbusiness\"]}[Data]",
-                "in",
-                "    c_usersbusiness"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "name": "Users Roles",
-        "columns": [
-          {
-            "name": "sk_usersroles",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "sk_usersroles"
-          },
-          {
-            "name": "nk_usersroles",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "nk_usersroles"
-          },
-          {
-            "name": "fsk_users",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "fsk_users"
-          },
-          {
-            "name": "fnk_users",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "fnk_users"
-          },
-          {
-            "name": "Roles - Name",
-            "dataType": "string",
-            "sourceColumn": "rolename"
-          },
-          {
-            "name": "Roles - Source Name",
-            "dataType": "string",
-            "sourceColumn": "applicationname"
-          },
-          {
-            "name": "userid",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "userid"
-          },
-          {
-            "name": "Users - Invitation Status",
-            "dataType": "string",
-            "sourceColumn": "invitationstatus"
-          },
-          {
-            "name": "Roles - WritePermissions",
-            "dataType": "int64",
-            "sourceColumn": "WritePermissions",
-            "summarizeBy": "none"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Partition",
-            "dataView": "full",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = #\"SQL/localhost;coms_bi\",",
-                "    c_usersroles = Source{[Schema=\"c\",Item=\"usersroles\"]}[Data]",
-                "in",
-                "    c_usersroles"
-              ]
-            }
-          }
-        ]
-      },
-      {
         "name": "Brand",
+        "isHidden": true,
         "columns": [
           {
             "name": "sk_brand",
@@ -3169,22 +2870,18 @@
               ]
             }
           }
-        ],
-        "measures": [
-          {
-            "name": "Distinct Count of Brand - ID",
-            "expression": "DISTINCTCOUNT([Brand - ID])"
-          }
         ]
       },
       {
         "name": "Business",
+        "isHidden": true,
         "columns": [
           {
             "name": "sk_business",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "sk_business"
+            "sourceColumn": "sk_business",
+            "summarizeBy": "none"
           },
           {
             "name": "nk_business",
@@ -3250,12 +2947,6 @@
                 "    c_business"
               ]
             }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Distinct Count of Business - ID",
-            "expression": "calculate(DISTINCTCOUNT(Brand[Brand - ID]),Brand[Brand - ID]<>BLANK())"
           }
         ]
       },
@@ -3499,6 +3190,78 @@
             "name": "Fund - DateWoundUp",
             "dataType": "dateTime",
             "sourceColumn": "datewoundup"
+          },
+          {
+            "name": "Brand - ID",
+            "dataType": "string",
+            "sourceColumn": "Brand - ID"
+          },
+          {
+            "name": "Brand - Code",
+            "dataType": "string",
+            "sourceColumn": "Brand - Code"
+          },
+          {
+            "name": "Brand - Description",
+            "dataType": "string",
+            "sourceColumn": "Brand - Description"
+          },
+          {
+            "name": "Brand - StatusCode",
+            "dataType": "int64",
+            "sourceColumn": "Brand - StatusCode"
+          },
+          {
+            "name": "Brand - StatusDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Brand - StatusDate"
+          },
+          {
+            "name": "Brand - Status",
+            "dataType": "string",
+            "sourceColumn": "Brand - Status"
+          },
+          {
+            "name": "Business - ID",
+            "dataType": "string",
+            "sourceColumn": "Business - ID"
+          },
+          {
+            "name": "Business - Code",
+            "dataType": "string",
+            "sourceColumn": "Business - Code"
+          },
+          {
+            "name": "Business - Description",
+            "dataType": "string",
+            "sourceColumn": "Business - Description"
+          },
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "fnk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_customer"
+          },
+          {
+            "name": "Business - StatusCode",
+            "dataType": "int64",
+            "sourceColumn": "Business - StatusCode"
+          },
+          {
+            "name": "Business - StatusDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Business - StatusDate"
+          },
+          {
+            "name": "Business - Status",
+            "dataType": "string",
+            "sourceColumn": "Business - Status"
           }
         ],
         "partitions": [
@@ -3521,6 +3284,18 @@
           {
             "name": "Funds - Count",
             "expression": "calculate(DISTINCTCOUNT(Funds[Fund - ID]),Funds[Fund - ID]<>BLANK())"
+          },
+          {
+            "name": "Funds - Count Brand",
+            "expression": "calculate(DISTINCTCOUNT(Funds[fnk_brand]),Funds[fnk_brand]<>BLANK())"
+          },
+          {
+            "name": "Funds - Count Business",
+            "expression": "calculate(DISTINCTCOUNT(Funds[fnk_business]),Funds[fnk_business]<>BLANK())"
+          },
+          {
+            "name": "Funds - Count Customer",
+            "expression": "calculate(DISTINCTCOUNT(Funds[fnk_customer]),Funds[fnk_customer]<>BLANK())"
           }
         ]
       },
@@ -3915,19 +3690,278 @@
         "measures": [
           {
             "name": "Assessment - Count",
-            "expression": "calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[Assessment - ID]<>BLANK())"
+            "expression": "calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[Assessment - ID]<>BLANK(),UsersBridge)"
           },
           {
             "name": "Course - Count",
-            "expression": "calculate(DISTINCTCOUNT(Training[nk_coursestats]), Training[Course - ID]<>BLANK())"
+            "expression": "calculate(DISTINCTCOUNT(Training[nk_coursestats]), Training[Course - ID]<>BLANK(),UsersBridge)"
           },
           {
             "name": "Course - Count Completed",
-            "expression": " calculate(DISTINCTCOUNT(Training[nk_coursestats]),Training[Course - isCompleted] = \"Yes\")"
+            "expression": " calculate(DISTINCTCOUNT(Training[nk_coursestats]),Training[Course - isCompleted] = \"Yes\",UsersBridge)"
           },
           {
             "name": "Assessment - Count Pass",
-            "expression": " calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[pass] = 1)"
+            "expression": " calculate(DISTINCTCOUNT(Training[nk_assessmentstats]),Training[pass] = 1,UsersBridge)"
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "columns": [
+          {
+            "name": "sk_users",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "sk_users"
+          },
+          {
+            "name": "nk_users",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_users"
+          },
+          {
+            "name": "User - Email",
+            "dataType": "string",
+            "sourceColumn": "User - Email"
+          },
+          {
+            "name": "User - Source",
+            "dataType": "string",
+            "sourceColumn": "User - Source"
+          },
+          {
+            "name": "User - Last Name",
+            "dataType": "string",
+            "sourceColumn": "User - Last Name"
+          },
+          {
+            "name": "User - First Name",
+            "dataType": "string",
+            "sourceColumn": "User - First Name"
+          },
+          {
+            "name": "User - isClassUser",
+            "dataType": "string",
+            "sourceColumn": "User - isClassUser"
+          },
+          {
+            "name": "User - isClassMemberUser",
+            "dataType": "string",
+            "sourceColumn": "User - isClassMemberUser"
+          },
+          {
+            "name": "User - isSMSFUser",
+            "dataType": "string",
+            "sourceColumn": "User - isSMSFUser"
+          },
+          {
+            "name": "User - isLMSUser",
+            "dataType": "string",
+            "sourceColumn": "User - isLMSUser"
+          },
+          {
+            "name": "User - ProfileID",
+            "dataType": "string",
+            "sourceColumn": "User - ProfileID"
+          },
+          {
+            "name": "User - userProfileStatus",
+            "dataType": "int64",
+            "sourceColumn": "User - userProfileStatus"
+          },
+          {
+            "name": "User - Creation Date",
+            "dataType": "dateTime",
+            "sourceColumn": "User - Creation Date"
+          },
+          {
+            "name": "User - Application Name",
+            "dataType": "string",
+            "sourceColumn": "User - Application Name"
+          },
+          {
+            "name": "User - Last Login Date",
+            "dataType": "dateTime",
+            "sourceColumn": "User - Last Login Date"
+          },
+          {
+            "name": "User - isApproved",
+            "dataType": "boolean",
+            "sourceColumn": "User - isApproved"
+          },
+          {
+            "name": "User - isLockedOut",
+            "dataType": "boolean",
+            "sourceColumn": "User - isLockedOut"
+          },
+          {
+            "name": "User - Status",
+            "dataType": "string",
+            "sourceColumn": "User - Status"
+          },
+          {
+            "name": "Business - ID",
+            "dataType": "string",
+            "sourceColumn": "Business - ID"
+          },
+          {
+            "name": "Business - Code",
+            "dataType": "string",
+            "sourceColumn": "Business - Code"
+          },
+          {
+            "name": "Business - Description",
+            "dataType": "string",
+            "sourceColumn": "Business - Description"
+          },
+          {
+            "name": "fsk_customer",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "fsk_customer"
+          },
+          {
+            "name": "fnk_customer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "fnk_customer"
+          },
+          {
+            "name": "Business - StatusCode",
+            "dataType": "int64",
+            "sourceColumn": "Business - StatusCode"
+          },
+          {
+            "name": "Business - StatusDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Business - StatusDate"
+          },
+          {
+            "name": "Business - Status",
+            "dataType": "string",
+            "sourceColumn": "Business - Status"
+          },
+          {
+            "name": "Roles - Name",
+            "dataType": "string",
+            "sourceColumn": "Roles - Name"
+          },
+          {
+            "name": "Roles - Application Name",
+            "dataType": "string",
+            "sourceColumn": "Roles - Application Name"
+          },
+          {
+            "name": "Roles - Invitation Status",
+            "dataType": "string",
+            "sourceColumn": "Roles - Invitation Status"
+          },
+          {
+            "name": "Roles - Write Permissions",
+            "dataType": "int64",
+            "sourceColumn": "Roles - Write Permissions"
+          },
+          {
+            "name": "nk_usersroles",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nk_usersroles"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_usersDetails = Source{[Schema=\"c\",Item=\"usersDetails\"]}[Data]",
+                "in",
+                "    c_usersDetails"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Users - Count",
+            "expression": "calculate(DISTINCTCOUNT('Users'[nk_users]),'Users'[nk_users]<>BLANK())"
+          },
+          {
+            "name": "Users - Count Business",
+            "expression": "calculate(DISTINCTCOUNT('Users'[Business - ID]),'Users'[Business - ID]<>BLANK())"
+          },
+          {
+            "name": "Users - Count Roles",
+            "expression": "calculate(DISTINCTCOUNT('Users'[nk_usersroles]),'Users'[nk_usersroles]<>BLANK())"
+          }
+        ]
+      },
+      {
+        "name": "UsersBridge",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "sk_users",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Users[sk_users]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "CALCULATETABLE(VALUES(Users[sk_users]),NOT(ISBLANK(Users[sk_users])))"
+            }
+          }
+        ]
+      },
+      {
+        "name": "c usersbusiness",
+        "isHidden": true,
+        "columns": [
+          {
+            "name": "fsk_users",
+            "dataType": "int64",
+            "sourceColumn": "fsk_users"
+          },
+          {
+            "name": "fnk_users",
+            "dataType": "string",
+            "sourceColumn": "fnk_users"
+          },
+          {
+            "name": "fsk_business",
+            "dataType": "int64",
+            "sourceColumn": "fsk_business"
+          },
+          {
+            "name": "fnk_business",
+            "dataType": "string",
+            "sourceColumn": "fnk_business"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;coms_bi\",",
+                "    c_usersbusiness = Source{[Schema=\"c\",Item=\"usersbusiness\"]}[Data]",
+                "in",
+                "    c_usersbusiness"
+              ]
+            }
           }
         ]
       }
@@ -3953,36 +3987,6 @@
         "fromColumn": "fsk_customer",
         "toTable": "Customers",
         "toColumn": "sk_customer"
-      },
-      {
-        "name": "b87b2c27-dbb8-4810-93a5-16c4a6a28825",
-        "fromTable": "Users Roles",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
-      },
-      {
-        "name": "ff247c88-50f8-45bf-af95-0ed444a00b21",
-        "fromTable": "Fundamentals",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
-      },
-      {
-        "name": "79a2b266-810f-42ef-894c-37772bb590a8",
-        "fromTable": "Funds",
-        "fromColumn": "fsk_brand",
-        "toTable": "Brand",
-        "toColumn": "sk_brand",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
-        "name": "4d6011a0-128e-4d72-b8ac-119c29b782b1",
-        "fromTable": "Brand",
-        "fromColumn": "fsk_business",
-        "toTable": "Business",
-        "toColumn": "sk_business",
-        "crossFilteringBehavior": "bothDirections"
       },
       {
         "name": "b78eb350-56b5-475b-bac3-233509cd75f5",
@@ -4014,42 +4018,55 @@
         "toColumn": "sk_propertyaddress"
       },
       {
-        "name": "a3483039-d578-4ef3-9d4b-25db32f44db4",
+        "name": "b8f351fc-64c7-4cc9-b6a1-2e9ada83c3ee",
         "fromTable": "Transactions",
         "fromColumn": "fsk_fund",
         "toTable": "Funds",
-        "toColumn": "sk_fund",
-        "crossFilteringBehavior": "bothDirections"
+        "toColumn": "sk_fund"
       },
       {
-        "name": "6852795d-990b-4069-810f-e3ac57c1d71b",
+        "name": "c5540cee-8cfa-4b5f-8c6f-2eb9d06cd5e5",
         "fromTable": "Training",
         "fromColumn": "fsk_users",
-        "toTable": "Users",
-        "toColumn": "sk_users"
-      },
-      {
-        "name": "897441f3-aa00-4e47-b4ef-3e2d509e8ef0",
-        "fromTable": "c usersbusiness",
-        "fromColumn": "fsk_users",
-        "toTable": "Users",
+        "toTable": "UsersBridge",
         "toColumn": "sk_users",
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "114750ea-f0b9-403a-ad6f-d8ce6d6344c1",
-        "fromTable": "c usersbusiness",
-        "fromColumn": "fsk_business",
-        "toTable": "Business",
-        "toColumn": "sk_business",
+        "name": "10a6b7c7-5090-4a2c-add3-b135557054e2",
+        "fromTable": "Users",
+        "fromColumn": "sk_users",
+        "toTable": "UsersBridge",
+        "toColumn": "sk_users",
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "9b4bbe0f-9c48-4db0-98a3-a8c88101c881",
-        "fromTable": "Business",
+        "name": "8e34d80f-b967-4e0b-b00b-3cfa519fed1a",
+        "fromTable": "Funds",
         "fromColumn": "fsk_customer",
         "toTable": "Customers",
-        "toColumn": "sk_customer",
+        "toColumn": "sk_customer"
+      },
+      {
+        "name": "27fa15ce-4cb5-43de-abb3-9fa2bffdb696",
+        "fromTable": "Users",
+        "fromColumn": "fsk_customer",
+        "toTable": "Customers",
+        "toColumn": "sk_customer"
+      },
+      {
+        "name": "7cf59303-b9dc-4217-9b14-32469d365456",
+        "fromTable": "Report Package",
+        "fromColumn": "fsk_users",
+        "toTable": "UsersBridge",
+        "toColumn": "sk_users"
+      },
+      {
+        "name": "52a47795-d7dc-4053-8e65-e2c948b74dfb",
+        "fromTable": "Fundamentals",
+        "fromColumn": "fsk_users",
+        "toTable": "UsersBridge",
+        "toColumn": "sk_users",
         "crossFilteringBehavior": "bothDirections"
       }
     ],
